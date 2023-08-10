@@ -3,7 +3,8 @@
 // script.js
 
 // Check if the browser supports PWA features
-if ('serviceWorker' in navigator && 'PushManager' in window) {
+// if ('serviceWorker' in navigator && 'PushManager' in window) {
+if ('serviceWorker' in navigator) {
     // Display an alert encouraging the user to install the PWA
     const installPrompt = document.getElementById('install-prompt');
     installPrompt.style.display = 'block';

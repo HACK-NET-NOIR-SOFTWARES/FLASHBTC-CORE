@@ -1,6 +1,6 @@
 // service-worker.js
 
-const CACHE_NAME = 'my-cache-v4';
+const CACHE_NAME = 'my-cache-v5';
 
 self.addEventListener('install', event => {
   event.waitUntil(

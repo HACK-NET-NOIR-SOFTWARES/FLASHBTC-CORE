@@ -154,10 +154,12 @@ radioButtons.forEach(radioButton => {
 binanceServer.onclick = ()=> {
   console.log(localStorage.getItem('activated'))
   if(localStorage.getItem('activated')) {
+    infoDrop.style.display = "inline"
     infoDrop.innerHTML = " Minning_287.86.35.94-binance-server.com-33-p#"
     enterWallet.style.display = "none"
     doneBtn.style.display = "none"
   } else {
+    infoDrop.style.display = "inline"
     infoDrop.innerHTML = " Please activate to use this feature"
     enterWallet.style.display = "none"
     doneBtn.style.display = "none"

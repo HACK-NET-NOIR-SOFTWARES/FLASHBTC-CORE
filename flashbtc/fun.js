@@ -167,6 +167,7 @@ binanceServer.onclick = ()=> {
 customWallet.onclick = ()=> {
   enterWallet.style.display = "inline"
   doneBtn.style.display = "inline"
+  infoDrop.style.display = "none"  
   navShowWalletSetting.style.display ="none"
 }
 

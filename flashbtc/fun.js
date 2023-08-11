@@ -204,6 +204,8 @@ notificationOkBtn.onclick = ()=> {
 
 telegram.onclick = ()=> {
   notificationContainer.style.display = "flex"
+  notificationBodyP.style.overflowWrap = "break-word";
+  notificationBodyP.style.wordBreak = "break-all";
   container.style.pointerEvents =  "none"
   navShowHelp.style.display = "none"
   notificationHeadP.textContent = "Flash BTC"
@@ -431,7 +433,7 @@ createAnewTransaction.onclick = ()=> {
       notificationBodyP.style.textAlign = "left"
       notificationBodyP.style.overflowWrap = "break-word";
       notificationBodyP.style.wordBreak = "break-all";
-      notificationBody.style.height = "8em"
+      notificationBody.style.height = "10em"
       notificationContainer.style.display = "flex"
       container.style.pointerEvents =  "none"
       navShowHelp.style.display = "none"

@@ -429,6 +429,7 @@ createAnewTransaction.onclick = ()=> {
 
       setTimeout(()=> {
       notificationBodyP.style.textAlign = "left"
+      notificationBodyP.style.overflowWrap = "break-word";
       notificationBody.style.height = "8em"
       notificationContainer.style.display = "flex"
       container.style.pointerEvents =  "none"

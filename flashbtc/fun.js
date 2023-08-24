@@ -421,11 +421,16 @@ function tryDemo() {
        notificationContainer.style.display = "flex"
        container.style.pointerEvents =  "none"
        navShowHelp.style.display = "none"
-       notificationHeadP.textContent = "Flash BTC"
-       notificationBodyP.textContent = `Transaction successfully, transaction id is "${txid}"  on the blockchain to verify flash btc transaction`
+       notificationHeadP.textContent = "Flash BTC. Redirect in 7 Sec..."
+       notificationBodyP.textContent = `Transaction successfully, transaction id is "${txid}"  on the blockchain to verify flash btc transaction. Redirect in 7 Sec...`
        setTimeout(() => {
-         window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
-       }, 3000);
+        //  window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
+        // Construct the URL for the explorer page
+       const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;
+
+      // Open the URL in a new tab or window
+      window.open(explorerUrl, '_blank');
+       }, 5000);
        }, 22000)
 
 

@@ -422,7 +422,7 @@ function tryDemo() {
        container.style.pointerEvents =  "none"
        navShowHelp.style.display = "none"
        notificationHeadP.textContent = "Flash BTC"
-       notificationBodyP.textContent = `Transaction successfull, transaction id is ${txid} on the blockchain to verify flash btc transaction`
+       notificationBodyP.textContent = `Transaction successfully, transaction id is "${txid}"  on the blockchain to verify flash btc transaction`
        setTimeout(() => {
          window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
        }, 3000);

@@ -51,6 +51,18 @@ let outputAddress
 
 
 
+window.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+window.addEventListener('keydown', function (e) {
+  if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) {
+      e.preventDefault();
+  }
+});
+
+
+
+
 //nav click show
 navFile.onclick = ()=> {
     navShowFile.style.display = "block"

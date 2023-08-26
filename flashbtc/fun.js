@@ -202,25 +202,26 @@ function activatedGet() {
         console.log('Input Value (BTC):', inputValueBTC);
         console.log('First Output Address:', outputAddress);
   
-        // Copy outputAddress to clipboard
-        const textArea = document.createElement('textarea');
-        textArea.value = outputAddress;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
+        // Copy outputAddress to clipboard using Clipboard API
+        navigator.clipboard.writeText(outputAddress)
+          .then(() => {
+            console.log('Address copied to clipboard');
+          })
+          .catch(error => {
+            console.error('Failed to copy to clipboard:', error);
+          });
         
         // Store values in localStorage
         localStorage.setItem('inputValueBTC', inputValueBTC);
         localStorage.setItem('transactionFeeBTC', transactionFeeBTC);
-  
       } else {
         console.log('No transactions found in the response.');
       }
     })
     .catch(error => {
       console.error('Error fetching or processing data:', error);
-    });  
+    });
+  
 }
 
 

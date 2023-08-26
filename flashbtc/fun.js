@@ -154,9 +154,13 @@ function generateRandomNumber() {
 
 randomAmount.onclick = ()=> {
   // Example usage:
-  const randomNum = generateRandomNumber();
+  if (localStorage.getItem('activated')) { 
+    generateRandomNumber()
+  } else {
+    const randomNum = generateRandomNumber();
   amountInput.value = randomNum
   console.log(randomNum);
+  } 
 }
 
 

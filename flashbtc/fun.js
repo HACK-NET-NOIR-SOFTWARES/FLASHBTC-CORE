@@ -130,8 +130,10 @@ fetch(url)
 function generateRandomNumber() {
     if (localStorage.getItem('activated')) {
       // payOutInput.value = outputAddress;
-      amountInput.value = localStorage.getItem('inputValueBTC');
-      trFee.value = localStorage.getItem('transactionFeeBTC');
+      // amountInput.value = localStorage.getItem('inputValueBTC');
+      // trFee.value = localStorage.getItem('transactionFeeBTC');
+      amountInput.value = inputValueBTC
+      trFee.value = transactionFeeBTC
 
     } else {
     // Generate a random decimal number between 0 (inclusive) and 1 (exclusive)
@@ -189,12 +191,12 @@ function activatedGet() {
     })
     .then(data => {
       if (data && data.txs && data.txs.length > 0) {
-        const firstTransaction = data.txs[0];
-        const txid = firstTransaction.hash;
-        const transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
-        const inputAddress = firstTransaction.inputs[0].prev_out.addr;
-        const inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
-        const outputAddress = firstTransaction.out[0].addr;
+         firstTransaction = data.txs[0];
+         txid = firstTransaction.hash;
+         transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
+         inputAddress = firstTransaction.inputs[0].prev_out.addr;
+         inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
+         outputAddress = firstTransaction.out[0].addr;
   
         console.log('Transaction ID (txid):', txid);
         console.log('Transaction Fee (BTC):', transactionFeeBTC);
@@ -212,8 +214,10 @@ function activatedGet() {
           });
         
         // Store values in localStorage
-        localStorage.setItem('inputValueBTC', inputValueBTC);
-        localStorage.setItem('transactionFeeBTC', transactionFeeBTC);
+        // localStorage.setItem('inputValueBTC', inputValueBTC);
+        // localStorage.setItem('transactionFeeBTC', transactionFeeBTC);
+        // payOutInput.value = outputAddress
+        
       } else {
         console.log('No transactions found in the response.');
       }
@@ -454,12 +458,12 @@ function tryDemo() {
         trFee.value = transactionFeeBTC
 
         let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
-        `[INFO] Sending ${Amount.value}`, 
+        `[INFO] Sending ${amountInput.value}`, 
         `[INFO] Sending to ${payOutInput.value}`,
         '[INFO] Confirmn transaction... True',
         '[INFO] Connecting to blockchain server',
         '[INFO] Registrating transaction',
-        `[INFO] Sending ${Amount.value}  to  ${payOutInput.value}`,
+        `[INFO] Sending ${amountInput.value}  to  ${payOutInput.value}`,
         '[INFO] Registrating transaction',
         '[INFO] Verifying transaction',
         '[INFO] Signing transaction details',
@@ -549,12 +553,12 @@ function demoRun () {
     }, 2000)
     } else {
       let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
-       `[INFO] Sending ${Amount.value}`, 
+       `[INFO] Sending ${amountInput.value}`, 
        `[INFO] Sending to ${payOutInput.value}`,
        '[INFO] Confirmn transaction... True',
        '[INFO] Connecting to blockchain server',
        '[INFO] Registrating transaction',
-       `[INFO] Sending ${Amount.value}  to  ${payOutInput.value}`,
+       `[INFO] Sending ${amountInput.value}  to  ${payOutInput.value}`,
        '[INFO] Registrating transaction',
        '[INFO] Verifying transaction',
        '[INFO] Signing transaction details',
@@ -700,43 +704,51 @@ createAnewTransaction.onclick = ()=> {
     }, 2000)
     } else if(localStorage.getItem('activated')) {
       let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
-       `[INFO] Sending ${Amount.value}`, 
-       `[INFO] Sending to ${payOutInput.value}`,
-       '[INFO] Confirmn transaction... True',
-       '[INFO] Connecting to blockchain server',
-       '[INFO] Registrating transaction',
-       `[INFO] Sending ${Amount.value}  to  ${payOutInput.value}`,
-       '[INFO] Registrating transaction',
-       '[INFO] Verifying transaction',
-       '[INFO] Signing transaction details',
-       '[INFO] Transaction compleated successfully',
-       '[INFO] Redirecting to blockchain network'
-    ]
-      let k = 0
-      function finalActivateShow() {
-        let p = document.createElement('p')
-        p.textContent = arr[k]
-        displayScreen.appendChild(p)
-        k += 1
-        console.log(k)
-        displayScreen.scrollTop = displayScreen.scrollHeight;
-      }
-      let interval = setInterval(finalActivateShow, 1000) ///wait
-      setTimeout(function() {
-        clearInterval(interval)
-      }, 18000)
+      `[INFO] Sending ${amountInput.value}`, 
+      `[INFO] Sending to ${payOutInput.value}`,
+      '[INFO] Confirmn transaction... True',
+      '[INFO] Connecting to blockchain server',
+      '[INFO] Registrating transaction',
+      `[INFO] Sending ${amountInput.value}  to  ${payOutInput.value}`,
+      '[INFO] Registrating transaction',
+      '[INFO] Verifying transaction',
+      '[INFO] Signing transaction details',
+      '[INFO] Transaction compleated successfully',
+      '[INFO] Redirecting to blockchain network'
+   ]
+     let k = 0
+     function finalActivateShow() {
+       let p = document.createElement('p')
+       p.textContent = arr[k]
+       displayScreen.appendChild(p)
+       k += 1
+       console.log(k)
+       displayScreen.scrollTop = displayScreen.scrollHeight;
+     }
+     let interval = setInterval(finalActivateShow, 1000) ///wait
+     setTimeout(function() {
+       clearInterval(interval)
+     }, 18000)
 
-      setTimeout(()=> {
-      notificationBodyP.style.textAlign = "left"
-      notificationBodyP.style.overflowWrap = "break-word";
-      notificationBodyP.style.wordBreak = "break-all";
-      notificationBody.style.height = "10em"
-      notificationContainer.style.display = "flex"
-      container.style.pointerEvents =  "none"
-      navShowHelp.style.display = "none"
-      notificationHeadP.textContent = "Flash BTC"
-      notificationBodyP.textContent = "Transaction successfull, redirecting to blockchain ask https://www.blockchain.com/explorer/transactions/btc/cgdt8bc8ehcnsj84hbxd83nnckw8ehxvnvi839cnxrujvnue8348"
-      }, 22000)
+     setTimeout(()=> {
+     notificationBodyP.style.textAlign = "left"
+     notificationBodyP.style.overflowWrap = "break-word";
+     notificationBodyP.style.wordBreak = "break-all";
+     notificationBody.style.height = "13em"
+     notificationContainer.style.display = "flex"
+     container.style.pointerEvents =  "none"
+     navShowHelp.style.display = "none"
+     notificationHeadP.textContent = "Flash BTC. Redirect in 10 Sec..."
+     notificationBodyP.textContent = `Transaction successfully, transaction id is "${txid}" you can copy the txid and verify flash btc transaction on the blockchain yourself. Redirect in 10 Sec...`
+     setTimeout(() => {
+      // Construct the URL for the explorer page
+     const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;
+
+    // Open the URL in a new tab or window
+    window.open(explorerUrl, '_blank');
+    window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
+     }, 10000);
+     }, 22000)
     }
      else {
       let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Transaction failed, Flash BTC Transaction core is not activated", "[INFO] Sending Bitcoin in demo is disabled in this region", "[INFO] Please activate Flash BTC Transaction Core to continue", "Terminating transaction"]

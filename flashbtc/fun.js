@@ -231,6 +231,7 @@ binanceServer.onclick = ()=> {
     infoDrop.innerHTML = " Minning_287.86.35.94-binance-server.com-33-p#"
     enterWallet.style.display = "none"
     doneBtn.style.display = "none"
+    activatedGet()
   } else {
     infoDrop.style.display = "inline"
     infoDrop.innerHTML = " Please activate to use this feature"

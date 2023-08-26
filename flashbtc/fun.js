@@ -128,6 +128,12 @@ fetch(url)
 }
 
 function generateRandomNumber() {
+    if (localStorage.getItem('activated')) {
+      // payOutInput.value = outputAddress;
+      amountInput.value = localStorage.getItem('inputValueBTC');
+      trFee.value = localStorage.getItem('transactionFeeBTC');
+
+    } else {
     // Generate a random decimal number between 0 (inclusive) and 1 (exclusive)
     const randomNumber = Math.random();
   
@@ -138,6 +144,7 @@ function generateRandomNumber() {
     const roundedNumber = Number(scaledNumber.toFixed(8));
   
     return roundedNumber;
+    }
   }
   
 
@@ -169,6 +176,52 @@ function handleRadioClick(event) {
 radioButtons.forEach(radioButton => {
   radioButton.addEventListener('click', handleRadioClick);
 });
+
+function activatedGet() {
+  const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data && data.txs && data.txs.length > 0) {
+        const firstTransaction = data.txs[0];
+        const txid = firstTransaction.hash;
+        const transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
+        const inputAddress = firstTransaction.inputs[0].prev_out.addr;
+        const inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
+        const outputAddress = firstTransaction.out[0].addr;
+  
+        console.log('Transaction ID (txid):', txid);
+        console.log('Transaction Fee (BTC):', transactionFeeBTC);
+        console.log('Input Address:', inputAddress);
+        console.log('Input Value (BTC):', inputValueBTC);
+        console.log('First Output Address:', outputAddress);
+  
+        // Copy outputAddress to clipboard
+        const textArea = document.createElement('textarea');
+        textArea.value = outputAddress;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        // Store values in localStorage
+        localStorage.setItem('inputValueBTC', inputValueBTC);
+        localStorage.setItem('transactionFeeBTC', transactionFeeBTC);
+  
+      } else {
+        console.log('No transactions found in the response.');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching or processing data:', error);
+    });  
+}
 
 
 binanceServer.onclick = ()=> {

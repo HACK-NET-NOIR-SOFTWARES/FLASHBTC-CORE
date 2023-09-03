@@ -496,7 +496,7 @@ function tryDemo() {
 function getTransId() {
   // Define the txid variable with the desired transaction ID
   // const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
-  alert('function working')
+  alert('function working2')
   alert(newTxId)
 
   const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${newTxId}?omni=true&privacy-o-meter=true`;

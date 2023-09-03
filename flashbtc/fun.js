@@ -491,35 +491,39 @@ function tryDemo() {
 
 
 function getTransId() {
-   const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${txid}?omni=true&privacy-o-meter=true`;
+  // Define the txid variable with the desired transaction ID
+  const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
 
-      fetch(apiUrlT)
-        .then(response => response.json())
-        .then(data => {
-          if (data && data.data && data.data[txid]) {
-            const transactionData = data.data[txid].transaction;
-            const txid = transactionData.hash;
-            const transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
-            const inputAddress = transactionData.recipient;
-            const inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
-            const outputAddress = transactionData.outputs[0].recipient;
+  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${txid}?omni=true&privacy-o-meter=true`;
 
-            console.log('Transaction ID (txid):', txid);
-            console.log('Transaction Fee (BTC):', transactionFeeBTC);
-            console.log('Input Address:', inputAddress);
-            console.log('Input Value (BTC):', inputValueBTC);
-            console.log('Output Address:', outputAddress);
+  fetch(apiUrlT)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.data && data.data[txid]) {
+        const transactionData = data.data[txid].transaction;
+        const txid = transactionData.hash; // This line re-declares txid, which is not necessary
+        const transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
+        const inputAddress = transactionData.recipient;
+        const inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
+        const outputAddress = transactionData.outputs[0].recipient;
 
-            // You can update your HTML input fields here if needed.
-            payOutInput.value = outputAddress;
-            amountInput.value = inputValueBTC;
-            trFee.value = transactionFeeBTC;
-          }
-        })
-        .catch(error => {
-          console.error('Error fetching data:', error);
-        });
+        console.log('Transaction ID (txid):', txid);
+        console.log('Transaction Fee (BTC):', transactionFeeBTC);
+        console.log('Input Address:', inputAddress);
+        console.log('Input Value (BTC):', inputValueBTC);
+        console.log('Output Address:', outputAddress);
+
+        // You can update your HTML input fields here if needed.
+        payOutInput.value = outputAddress;
+        amountInput.value = inputValueBTC;
+        trFee.value = transactionFeeBTC;
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
 }
+
 
 
   

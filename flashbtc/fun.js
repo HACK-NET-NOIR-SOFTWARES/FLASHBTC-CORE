@@ -480,9 +480,8 @@ function tryDemo() {
         //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
         //  outputAddress = firstTransaction.recipient;
 
-                  if(txid != "") {
           getTransId()
-         }
+
   
         // console.log('Transaction ID (txid):', txid);
         // console.log('Transaction Fee (BTC):', transactionFeeBTC);
@@ -494,6 +493,7 @@ function tryDemo() {
 function getTransId() {
   // Define the txid variable with the desired transaction ID
   // const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
+  alert('function working')
 
   const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02?omni=true&privacy-o-meter=true`;
 
@@ -503,6 +503,7 @@ function getTransId() {
       if (data && data.data && data.data[txid]) {
         const transactionData = data.data[txid].transaction;
          txid = transactionData.hash; // This line re-declares txid, which is not necessary
+         alert("2 show")
          transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
          inputAddress = transactionData.recipient;
          inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC

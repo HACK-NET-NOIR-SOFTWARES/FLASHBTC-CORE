@@ -469,10 +469,10 @@ function tryDemo() {
       if (data && data.data && data.data.length > 0) {
         const firstTransaction = data.data[0];
         const txid = firstTransaction.transaction_hash;
-        const transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
-        const inputAddress = '';
-        const inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
-        const outputAddress = firstTransaction.recipient;
+        // const transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
+        // const inputAddress = '';
+        // const inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
+        // const outputAddress = firstTransaction.recipient;
   
         console.log('Transaction ID (txid):', txid);
         console.log('Transaction Fee (BTC):', transactionFeeBTC);

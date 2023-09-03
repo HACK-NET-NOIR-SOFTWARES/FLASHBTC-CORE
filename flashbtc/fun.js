@@ -438,28 +438,53 @@ demoTry.onclick = ()=> {
 }
 
 function tryDemo() {
-  const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
+  // const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
+
+  // fetch(apiUrl)
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     if (data && data.txs && data.txs.length > 0) {
+  //        firstTransaction = data.txs[0];
+  //        txid = firstTransaction.hash;
+  //        transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
+  //        inputAddress = firstTransaction.inputs[0].prev_out.addr;
+  //        inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
+  //        outputAddress = firstTransaction.out[0].addr;
+  
+  //       console.log('Transaction ID (txid):', txid);
+  //       console.log('Transaction Fee (BTC):', transactionFeeBTC);
+  //       console.log('Input Address:', inputAddress);
+  //       console.log('Input Value (BTC):', inputValueBTC);
+  //       console.log('First Output Address:', outputAddress);
+        
+  //       payOutInput.value = outputAddress
+  //       amountInput.value = inputValueBTC
+  //       trFee.value = transactionFeeBTC
+
+  const apiUrl = 'https://api.blockchair.com/bitcoin/mempool/outputs?s=time(desc)';
 
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      if (data && data.txs && data.txs.length > 0) {
-         firstTransaction = data.txs[0];
-         txid = firstTransaction.hash;
-         transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
-         inputAddress = firstTransaction.inputs[0].prev_out.addr;
-         inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
-         outputAddress = firstTransaction.out[0].addr;
+      if (data && data.data && data.data.length > 0) {
+        const firstTransaction = data.data[0];
+        const txid = firstTransaction.transaction_hash;
+        const transactionFeeBTC = firstTransaction.value_usd; // Convert to BTC
+        const inputAddress = '';
+        const inputValueBTC = firstTransaction.value_usd; // Convert to BTC
+        const outputAddress = firstTransaction.recipient;
   
         console.log('Transaction ID (txid):', txid);
         console.log('Transaction Fee (BTC):', transactionFeeBTC);
         console.log('Input Address:', inputAddress);
         console.log('Input Value (BTC):', inputValueBTC);
-        console.log('First Output Address:', outputAddress);
-        
-        payOutInput.value = outputAddress
-        amountInput.value = inputValueBTC
-        trFee.value = transactionFeeBTC
+        console.log('Output Address:', outputAddress);
+  
+        // You can update your HTML input fields here if needed.
+        // payOutInput.value = outputAddress;
+        // amountInput.value = inputValueBTC;
+        // trFee.value = transactionFeeBTC;
+  
 
         let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
         `[INFO] Sending ${amountInput.value}`, 

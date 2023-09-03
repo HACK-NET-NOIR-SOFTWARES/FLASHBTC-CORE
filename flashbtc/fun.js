@@ -482,7 +482,6 @@ function tryDemo() {
         //  outputAddress = firstTransaction.recipient;
           
           newTxId = txid
-          alert(newTxId)
           getTransId()
 
   
@@ -496,8 +495,6 @@ function tryDemo() {
 function getTransId() {
   // Define the txid variable with the desired transaction ID
   // const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
-  alert('function working2')
-  alert(newTxId)
 
   const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${newTxId}?omni=true&privacy-o-meter=true`;
 
@@ -508,7 +505,6 @@ function getTransId() {
         const transactionData = data.data[`${newTxId}`].transaction;
         const transactionDataOption = data.data[`${newTxId}`].outputs;
          txid = transactionData.hash; // This line re-declares txid, which is not necessary
-         alert("2 show")
          transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
          inputAddress = transactionData.recipient;
          inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
@@ -933,6 +929,5 @@ console.log('Device Memory:', deviceMemory, 'GB');
 Device.textContent = "Device Name: " + deviceName
 osVersions.textContent = osVersion
 physicalMemory.textContent = deviceMemory + " GB"
-
 
 

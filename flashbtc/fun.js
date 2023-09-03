@@ -480,8 +480,9 @@ function tryDemo() {
         //  inputAddress = '';
         //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
         //  outputAddress = firstTransaction.recipient;
-          alert(txid)
+          
           newTxId = txid
+          alert(newTxId)
           getTransId()
 
   
@@ -496,6 +497,7 @@ function getTransId() {
   // Define the txid variable with the desired transaction ID
   // const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
   alert('function working')
+  alert(newTxId)
 
   const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/newTxId?omni=true&privacy-o-meter=true`;
 

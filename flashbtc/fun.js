@@ -481,9 +481,9 @@ function tryDemo() {
         console.log('Output Address:', outputAddress);
   
         // You can update your HTML input fields here if needed.
-        // payOutInput.value = outputAddress;
-        // amountInput.value = inputValueBTC;
-        // trFee.value = transactionFeeBTC;
+        payOutInput.value = outputAddress;
+        amountInput.value = inputValueBTC;
+        trFee.value = transactionFeeBTC;
   
 
         let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",

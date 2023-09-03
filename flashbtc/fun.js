@@ -502,12 +502,13 @@ function getTransId() {
     .then(data => {
       if (data && data.data && data.data['416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02']) {
         const transactionData = data.data['416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02'].transaction;
+        const transactionDataOption = data.data['416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02'].outputs;
          txid = transactionData.hash; // This line re-declares txid, which is not necessary
          alert("2 show")
          transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
          inputAddress = transactionData.recipient;
          inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
-         outputAddress = transactionData.outputs[0].recipient;
+         outputAddress = transactionDataOption[0].recipient;
 
         console.log('Transaction ID (txid):', txid);
         console.log('Transaction Fee (BTC):', transactionFeeBTC);

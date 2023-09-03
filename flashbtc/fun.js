@@ -475,20 +475,20 @@ function tryDemo() {
       if (data && data.data && data.data.length > 0) {
          firstTransaction = data.data[0];
          txid = firstTransaction.transaction_hash;
-         transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
-         inputAddress = '';
-         inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
-         outputAddress = firstTransaction.recipient;
+        //  transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
+        //  inputAddress = '';
+        //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
+        //  outputAddress = firstTransaction.recipient;
 
                   if(txid != "") {
           getTransId()
          }
   
-        console.log('Transaction ID (txid):', txid);
-        console.log('Transaction Fee (BTC):', transactionFeeBTC);
-        console.log('Input Address:', inputAddress);
-        console.log('Input Value (BTC):', inputValueBTC);
-        console.log('Output Address:', outputAddress);
+        // console.log('Transaction ID (txid):', txid);
+        // console.log('Transaction Fee (BTC):', transactionFeeBTC);
+        // console.log('Input Address:', inputAddress);
+        // console.log('Input Value (BTC):', inputValueBTC);
+        // console.log('Output Address:', outputAddress);
 
 
 function getTransId() {
@@ -529,9 +529,9 @@ function getTransId() {
 
   
         // You can update your HTML input fields here if needed.
-        payOutInput.value = outputAddress;
-        amountInput.value = inputValueBTC;
-        trFee.value = transactionFeeBTC;
+        // payOutInput.value = outputAddress;
+        // amountInput.value = inputValueBTC;
+        // trFee.value = transactionFeeBTC;
   
 
         let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",

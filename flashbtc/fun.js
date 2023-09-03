@@ -499,14 +499,14 @@ function getTransId() {
   alert('function working')
   alert(newTxId)
 
-  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/newTxId?omni=true&privacy-o-meter=true`;
+  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${newTxId}?omni=true&privacy-o-meter=true`;
 
   fetch(apiUrlT)
     .then(response => response.json())
     .then(data => {
-      if (data && data.data && data.data['newTxId']) {
-        const transactionData = data.data['newTxId'].transaction;
-        const transactionDataOption = data.data['newTxId'].outputs;
+      if (data && data.data && data.data[`${newTxId}`]) {
+        const transactionData = data.data[`${newTxId}`].transaction;
+        const transactionDataOption = data.data[`${newTxId}`].outputs;
          txid = transactionData.hash; // This line re-declares txid, which is not necessary
          alert("2 show")
          transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC

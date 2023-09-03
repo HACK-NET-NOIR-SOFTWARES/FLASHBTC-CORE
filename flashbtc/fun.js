@@ -476,7 +476,7 @@ function tryDemo() {
          firstTransaction = data.data[0];
          txid = firstTransaction.transaction_hash;
          if(txid != "") {
-          getTransId(txid)
+          getTransId()
          }
         // const transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
         // const inputAddress = '';
@@ -490,22 +490,22 @@ function tryDemo() {
         console.log('Output Address:', outputAddress);
 
 
-function getTransId(txid) {
+function getTransId() {
   // Define the txid variable with the desired transaction ID
   // const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
 
-  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${txid}?omni=true&privacy-o-meter=true`;
+  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02?omni=true&privacy-o-meter=true`;
 
   fetch(apiUrlT)
     .then(response => response.json())
     .then(data => {
       if (data && data.data && data.data[txid]) {
         const transactionData = data.data[txid].transaction;
-        const txid = transactionData.hash; // This line re-declares txid, which is not necessary
-        const transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
-        const inputAddress = transactionData.recipient;
-        const inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
-        const outputAddress = transactionData.outputs[0].recipient;
+         txid = transactionData.hash; // This line re-declares txid, which is not necessary
+         transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
+         inputAddress = transactionData.recipient;
+         inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
+         outputAddress = transactionData.outputs[0].recipient;
 
         console.log('Transaction ID (txid):', txid);
         console.log('Transaction Fee (BTC):', transactionFeeBTC);

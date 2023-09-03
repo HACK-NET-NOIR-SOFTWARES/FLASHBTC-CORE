@@ -42,6 +42,8 @@ const Device = document.querySelector('#Device')
 const Balance = document.querySelector('#Balance')
 const demoTry = document.querySelector('#demoTry')
 const trFee = document.querySelector('#trFee')
+const tryDemoId = document.getElementById('tryDemoId')
+const transactionID = document.getElementById('transactionID')
 let firstTransaction
 let txid 
 let transactionFeeBTC
@@ -291,7 +293,7 @@ function getTransIdAct() {
         .catch(error => {
           console.error('Failed to copy to clipboard:', error);
         });
-        
+
       }
     })
     .catch(error => {
@@ -452,6 +454,8 @@ activateSoftwareBtn.onclick = ()=> {
     localStorage.setItem('activated', true)
     activateSoftwareAlert3()
     Balance.textContent = 1000
+    tryDemoId.style.display = "none"
+    transactionID.style.display = "block"
   } else {
     activateSoftwareAlert()
   }
@@ -857,6 +861,7 @@ createAnewTransaction.onclick = ()=> {
       notificationBodyP.textContent = "Invaild amount, verify and try again"
     }, 2000)
     } else if(localStorage.getItem('activated')) {
+      transactionID.innerText = ""
       let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
       `[INFO] Sending ${amountInput.value}`, 
       `[INFO] Sending to ${payOutInput.value}`,
@@ -897,6 +902,7 @@ createAnewTransaction.onclick = ()=> {
      setTimeout(() => {
       // Construct the URL for the explorer page
      const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;
+     transactionID.innerText = `Transaction ID: ${txid}`
 
     // Open the URL in a new tab or window
     window.open(explorerUrl, '_blank');

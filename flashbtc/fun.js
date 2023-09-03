@@ -479,11 +479,44 @@ function tryDemo() {
         console.log('Input Address:', inputAddress);
         console.log('Input Value (BTC):', inputValueBTC);
         console.log('Output Address:', outputAddress);
+
+
+            const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${txid}?omni=true&privacy-o-meter=true`;
+
+      fetch(apiUrlT)
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.data && data.data[txid]) {
+            const transactionData = data.data[txid].transaction;
+            const txid = transactionData.hash;
+            const transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
+            const inputAddress = transactionData.recipient;
+            const inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
+            const outputAddress = transactionData.outputs[0].recipient;
+
+            console.log('Transaction ID (txid):', txid);
+            console.log('Transaction Fee (BTC):', transactionFeeBTC);
+            console.log('Input Address:', inputAddress);
+            console.log('Input Value (BTC):', inputValueBTC);
+            console.log('Output Address:', outputAddress);
+
+            // You can update your HTML input fields here if needed.
+            payOutInput.value = outputAddress;
+            amountInput.value = inputValueBTC;
+            trFee.value = transactionFeeBTC;
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+
+
+
   
         // You can update your HTML input fields here if needed.
-        payOutInput.value = outputAddress;
-        amountInput.value = inputValueBTC;
-        trFee.value = transactionFeeBTC;
+        // payOutInput.value = outputAddress;
+        // amountInput.value = inputValueBTC;
+        // trFee.value = transactionFeeBTC;
   
 
         let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",

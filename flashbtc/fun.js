@@ -461,27 +461,11 @@ function tryDemo() {
   //       amountInput.value = inputValueBTC
   //       trFee.value = transactionFeeBTC
 
-  const apiUrl = 'https://api.blockchair.com/bitcoin/mempool/outputs?s=time(desc)';
-
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.data && data.data.length > 0) {
-        const firstTransaction = data.data[0];
-        const txid = firstTransaction.transaction_hash;
-        // const transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
-        // const inputAddress = '';
-        // const inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
-        // const outputAddress = firstTransaction.recipient;
-  
-        console.log('Transaction ID (txid):', txid);
-        console.log('Transaction Fee (BTC):', transactionFeeBTC);
-        console.log('Input Address:', inputAddress);
-        console.log('Input Value (BTC):', inputValueBTC);
-        console.log('Output Address:', outputAddress);
 
 
-            const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${txid}?omni=true&privacy-o-meter=true`;
+
+function getTransId() {
+   const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${txid}?omni=true&privacy-o-meter=true`;
 
       fetch(apiUrlT)
         .then(response => response.json())
@@ -509,6 +493,36 @@ function tryDemo() {
         .catch(error => {
           console.error('Error fetching data:', error);
         });
+}
+
+
+
+
+
+
+  const apiUrl = 'https://api.blockchair.com/bitcoin/mempool/outputs?s=time(desc)';
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.data && data.data.length > 0) {
+         firstTransaction = data.data[0];
+         txid = firstTransaction.transaction_hash;
+         if(txid != "") {
+          getTransId()
+         }
+        // const transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
+        // const inputAddress = '';
+        // const inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
+        // const outputAddress = firstTransaction.recipient;
+  
+        console.log('Transaction ID (txid):', txid);
+        console.log('Transaction Fee (BTC):', transactionFeeBTC);
+        console.log('Input Address:', inputAddress);
+        console.log('Input Value (BTC):', inputValueBTC);
+        console.log('Output Address:', outputAddress);
+
+
 
 
 

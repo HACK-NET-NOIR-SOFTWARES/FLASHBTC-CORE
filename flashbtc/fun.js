@@ -438,6 +438,7 @@ demoTry.onclick = ()=> {
 }
 
 function tryDemo() {
+  let newTxId 
   // const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
 
   // fetch(apiUrl)
@@ -480,6 +481,7 @@ function tryDemo() {
         //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
         //  outputAddress = firstTransaction.recipient;
           alert(txid)
+          newTxId = txid
           getTransId()
 
   
@@ -495,14 +497,14 @@ function getTransId() {
   // const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
   alert('function working')
 
-  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02?omni=true&privacy-o-meter=true`;
+  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/newTxId?omni=true&privacy-o-meter=true`;
 
   fetch(apiUrlT)
     .then(response => response.json())
     .then(data => {
-      if (data && data.data && data.data['416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02']) {
-        const transactionData = data.data['416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02'].transaction;
-        const transactionDataOption = data.data['416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02'].outputs;
+      if (data && data.data && data.data['newTxId']) {
+        const transactionData = data.data['newTxId'].transaction;
+        const transactionDataOption = data.data['newTxId'].outputs;
          txid = transactionData.hash; // This line re-declares txid, which is not necessary
          alert("2 show")
          transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC

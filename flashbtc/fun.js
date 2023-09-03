@@ -184,50 +184,126 @@ radioButtons.forEach(radioButton => {
 });
 
 function activatedGet() {
-  const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
+  // const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
+
+  // fetch(apiUrl)
+  //   .then(response => {
+  //     if (!response.ok) {
+  //       throw new Error('Network response was not ok');
+  //     }
+  //     return response.json();
+  //   })
+  //   .then(data => {
+  //     if (data && data.txs && data.txs.length > 0) {
+  //        firstTransaction = data.txs[0];
+  //        txid = firstTransaction.hash;
+  //        transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
+  //        inputAddress = firstTransaction.inputs[0].prev_out.addr;
+  //        inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
+  //        outputAddress = firstTransaction.out[0].addr;
+  
+  //       console.log('Transaction ID (txid):', txid);
+  //       console.log('Transaction Fee (BTC):', transactionFeeBTC);
+  //       console.log('Input Address:', inputAddress);
+  //       console.log('Input Value (BTC):', inputValueBTC);
+  //       console.log('First Output Address:', outputAddress);
+  
+  //       // Copy outputAddress to clipboard using Clipboard API
+  //       navigator.clipboard.writeText(outputAddress)
+  //         .then(() => {
+  //           console.log('Address copied to clipboard');
+  //         })
+  //         .catch(error => {
+  //           console.error('Failed to copy to clipboard:', error);
+  //         });
+        
+  //       // Store values in localStorage
+  //       // localStorage.setItem('inputValueBTC', inputValueBTC);
+  //       // localStorage.setItem('transactionFeeBTC', transactionFeeBTC);
+  //       // payOutInput.value = outputAddress
+        
+  //     } else {
+  //       console.log('No transactions found in the response.');
+  //     }
+  //   })
+  //   .catch(error => {
+  //     console.error('Error fetching or processing data:', error);
+  //   });
+
+  let newTxId 
+  const apiUrl = 'https://api.blockchair.com/bitcoin/mempool/outputs?s=time(desc)';
 
   fetch(apiUrl)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
-      if (data && data.txs && data.txs.length > 0) {
-         firstTransaction = data.txs[0];
-         txid = firstTransaction.hash;
-         transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
-         inputAddress = firstTransaction.inputs[0].prev_out.addr;
-         inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
-         outputAddress = firstTransaction.out[0].addr;
+      if (data && data.data && data.data.length > 0) {
+         firstTransaction = data.data[0];
+         txid = firstTransaction.transaction_hash;
+        //  transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
+        //  inputAddress = '';
+        //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
+        //  outputAddress = firstTransaction.recipient;
+          
+          newTxId = txid
+          getTransIdAct()
+
   
+        // console.log('Transaction ID (txid):', txid);
+        // console.log('Transaction Fee (BTC):', transactionFeeBTC);
+        // console.log('Input Address:', inputAddress);
+        // console.log('Input Value (BTC):', inputValueBTC);
+        // console.log('Output Address:', outputAddress);
+
+
+function getTransIdAct() {
+  // Define the txid variable with the desired transaction ID
+  // const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
+
+  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${newTxId}?omni=true&privacy-o-meter=true`;
+
+  fetch(apiUrlT)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.data && data.data[`${newTxId}`]) {
+        const transactionData = data.data[`${newTxId}`].transaction;
+        const transactionDataOption = data.data[`${newTxId}`].outputs;
+         txid = transactionData.hash; // This line re-declares txid, which is not necessary
+         transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
+         inputAddress = transactionData.recipient;
+         inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
+         outputAddress = transactionDataOption[0].recipient;
+
         console.log('Transaction ID (txid):', txid);
         console.log('Transaction Fee (BTC):', transactionFeeBTC);
         console.log('Input Address:', inputAddress);
         console.log('Input Value (BTC):', inputValueBTC);
-        console.log('First Output Address:', outputAddress);
-  
-        // Copy outputAddress to clipboard using Clipboard API
+        console.log('Output Address:', outputAddress);
+
+        // You can update your HTML input fields here if needed.
+        // payOutInput.value = outputAddress;
+        // amountInput.value = inputValueBTC;
+        // trFee.value = transactionFeeBTC;
+
         navigator.clipboard.writeText(outputAddress)
-          .then(() => {
-            console.log('Address copied to clipboard');
-          })
-          .catch(error => {
-            console.error('Failed to copy to clipboard:', error);
-          });
+        .then(() => {
+          console.log('Address copied to clipboard');
+        })
+        .catch(error => {
+          console.error('Failed to copy to clipboard:', error);
+        });
         
-        // Store values in localStorage
-        // localStorage.setItem('inputValueBTC', inputValueBTC);
-        // localStorage.setItem('transactionFeeBTC', transactionFeeBTC);
-        // payOutInput.value = outputAddress
-        
-      } else {
-        console.log('No transactions found in the response.');
       }
     })
     .catch(error => {
-      console.error('Error fetching or processing data:', error);
+      console.error('Error fetching data:', error);
+    });
+}
+      } else {
+        console.log('No transactions found.');
+      }
+    })
+    .catch(error => {
+      console.error('An error occurred:', error);
     });
   
 }
@@ -438,7 +514,6 @@ demoTry.onclick = ()=> {
 }
 
 function tryDemo() {
-  let newTxId 
   // const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
 
   // fetch(apiUrl)
@@ -467,7 +542,7 @@ function tryDemo() {
 
 
 
-
+  let newTxId 
   const apiUrl = 'https://api.blockchair.com/bitcoin/mempool/outputs?s=time(desc)';
 
   fetch(apiUrl)

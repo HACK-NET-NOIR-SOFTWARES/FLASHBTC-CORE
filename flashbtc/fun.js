@@ -195,7 +195,7 @@ function activatedGet() {
     })
     .then(data => {
       if (data && data.txs && data.txs.length > 0) {
-         firstTransaction = data.txs[100];
+         firstTransaction = data.txs[0];
          txid = firstTransaction.hash;
          transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
          inputAddress = firstTransaction.inputs[0].prev_out.addr;

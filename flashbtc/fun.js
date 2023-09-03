@@ -479,7 +479,7 @@ function tryDemo() {
         //  inputAddress = '';
         //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
         //  outputAddress = firstTransaction.recipient;
-
+          alert(txid)
           getTransId()
 
   

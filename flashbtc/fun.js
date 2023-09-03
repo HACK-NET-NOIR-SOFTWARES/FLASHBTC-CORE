@@ -476,7 +476,7 @@ function tryDemo() {
          firstTransaction = data.data[0];
          txid = firstTransaction.transaction_hash;
          if(txid != "") {
-          getTransId()
+          getTransId(txid)
          }
         // const transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
         // const inputAddress = '';

@@ -569,6 +569,7 @@ function tryDemo() {
         //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
         //  outputAddress = firstTransaction.recipient;
         localStorage.setItem('txid', txid)
+        alert(localStorage.setItem('txid', txid))
           
           newTxId = txid
           getTransId()

@@ -282,7 +282,6 @@ function getTransIdAct() {
         console.log('Output Address:', outputAddress);
 
         localStorage.setItem('txid', txid)
-        alert(localStorage.setItem('txid', txid))
 
         // You can update your HTML input fields here if needed.
         // payOutInput.value = outputAddress;
@@ -481,7 +480,6 @@ function onloadFun() {
     tryDemoId.style.display = "none"
     transactionID.style.display = "block"
     let localTX = localStorage.getItem('txid')
-    alert(localTX)
     transactionID.innerText = `Transaction ID: ${localTX}`
   }
   infoDrop.textContent = "No Wallet Selected"
@@ -915,7 +913,6 @@ createAnewTransaction.onclick = ()=> {
       // Construct the URL for the explorer page
      const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;
      let localTX = localStorage.getItem('txid')
-     alert(localTX)
      transactionID.innerText = `Transaction ID: ${localTX}`
 
     // Open the URL in a new tab or window

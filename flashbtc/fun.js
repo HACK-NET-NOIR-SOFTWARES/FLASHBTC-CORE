@@ -281,6 +281,9 @@ function getTransIdAct() {
         console.log('Input Value (BTC):', inputValueBTC);
         console.log('Output Address:', outputAddress);
 
+        localStorage.setItem('txid', txid)
+        alert(localStorage.setItem('txid', txid))
+
         // You can update your HTML input fields here if needed.
         // payOutInput.value = outputAddress;
         // amountInput.value = inputValueBTC;
@@ -568,8 +571,6 @@ function tryDemo() {
         //  inputAddress = '';
         //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
         //  outputAddress = firstTransaction.recipient;
-        localStorage.setItem('txid', txid)
-        alert(localStorage.setItem('txid', txid))
           
           newTxId = txid
           getTransId()

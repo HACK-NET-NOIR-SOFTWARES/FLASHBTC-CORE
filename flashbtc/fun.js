@@ -318,6 +318,8 @@ binanceServer.onclick = ()=> {
     infoDrop.innerHTML = " Minning_287.86.35.94-binance-server.com-33-p#"
     enterWallet.style.display = "none"
     doneBtn.style.display = "none"
+    transactionID.style.display = "none"
+    localStorage.removeItem('txid')
     activatedGet()
   } else {
     infoDrop.style.display = "inline"
@@ -475,7 +477,8 @@ function onloadFun() {
   if(localStorage.getItem('activated')) {
     tryDemoId.style.display = "none"
     transactionID.style.display = "block"
-    transactionID.innerText = `Transaction ID: ${txid}`
+    let localTX = localStorage.getItem('txid')
+    transactionID.innerText = `Transaction ID: ${localTX}`
   }
   infoDrop.textContent = "No Wallet Selected"
   let arr = ["[INFO] Flash BTC Transaction (Core Network)", "[INFO] Copyright (C) Flashbtc.rf.gd | JULY 2022. Telegram: https://flashbtc.rf.gd/telegram.php", "[INFO] Running on", "[INFO] Blockchain network loading..."]
@@ -564,6 +567,7 @@ function tryDemo() {
         //  inputAddress = '';
         //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
         //  outputAddress = firstTransaction.recipient;
+        localStorage.setItem('txid', txid)
           
           newTxId = txid
           getTransId()
@@ -907,7 +911,8 @@ createAnewTransaction.onclick = ()=> {
      setTimeout(() => {
       // Construct the URL for the explorer page
      const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;
-     transactionID.innerText = `Transaction ID: ${txid}`
+     let localTX = localStorage.getItem('txid')
+     transactionID.innerText = `Transaction ID: ${localTX}`
 
     // Open the URL in a new tab or window
     window.open(explorerUrl, '_blank');

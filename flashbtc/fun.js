@@ -903,7 +903,7 @@ createAnewTransaction.onclick = ()=> {
      notificationBodyP.style.textAlign = "left"
      notificationBodyP.style.overflowWrap = "break-word";
      notificationBodyP.style.wordBreak = "break-all";
-     notificationBody.style.height = "13em"
+     notificationBody.style.height = "7em"
      notificationContainer.style.display = "flex"
      container.style.pointerEvents =  "none"
      navShowHelp.style.display = "none"

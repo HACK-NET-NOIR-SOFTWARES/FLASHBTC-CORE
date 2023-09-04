@@ -472,6 +472,11 @@ function checkInternetConnection() {
 }
 
 function onloadFun() {
+  if(localStorage.getItem('activated')) {
+    tryDemoId.style.display = "none"
+    transactionID.style.display = "block"
+    transactionID.innerText = `Transaction ID: ${txid}`
+  }
   infoDrop.textContent = "No Wallet Selected"
   let arr = ["[INFO] Flash BTC Transaction (Core Network)", "[INFO] Copyright (C) Flashbtc.rf.gd | JULY 2022. Telegram: https://flashbtc.rf.gd/telegram.php", "[INFO] Running on", "[INFO] Blockchain network loading..."]
   let k = 0

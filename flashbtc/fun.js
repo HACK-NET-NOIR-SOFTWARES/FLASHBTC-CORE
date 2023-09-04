@@ -281,7 +281,7 @@ function getTransIdAct() {
         console.log('Input Value (BTC):', inputValueBTC);
         console.log('Output Address:', outputAddress);
 
-        localStorage.setItem('txid', txid)
+        localStorage.setItem('txid', 'Transaction Blocked')
 
         // You can update your HTML input fields here if needed.
         // payOutInput.value = outputAddress;
@@ -907,17 +907,18 @@ createAnewTransaction.onclick = ()=> {
      notificationContainer.style.display = "flex"
      container.style.pointerEvents =  "none"
      navShowHelp.style.display = "none"
-     notificationHeadP.textContent = "Flash BTC. Redirect in 10 Sec..."
-     notificationBodyP.textContent = `Transaction successfully, transaction id is "${txid}" you can copy the txid and verify flash btc transaction on the blockchain yourself. Redirect in 10 Sec...`
+     notificationHeadP.textContent = "Flash BTC Blocked"
+     notificationBodyP.textContent = 'Transaction Pending, Transaction Blocked from accessing the block node'
      setTimeout(() => {
       // Construct the URL for the explorer page
-     const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;
+    //  const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;
      let localTX = localStorage.getItem('txid')
      transactionID.innerText = `Transaction ID: ${localTX}`
+    //  transactionID.innerText = `Transaction ID: ${localTX}`
 
     // Open the URL in a new tab or window
-    window.open(explorerUrl, '_blank');
-    window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
+    // window.open(explorerUrl, '_blank');
+    // window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
      }, 10000);
      }, 22000)
     }

@@ -65,8 +65,21 @@
     <div class="container">
         <h1>Blockchain Node Bypass</h1>
         <p><span class="icon-container"><i class="fas fa-lock padlock-icon"></i></span> $30 to activate</p>
-        <input type="text" placeholder="Enter Activation Code">
-        <button>Register Activation Code Node Bypass</button>
+        <input type="text" id="activationCodeInput" placeholder="Enter Activation Code">
+        <button onclick="checkActivationCode()">Register Activation Code Node Bypass</button>
     </div>
+
+    <script>
+        function checkActivationCode() {
+            var codeInput = document.getElementById("activationCodeInput").value;
+            var firstEightCharacters = codeInput.substr(0, 8);
+            
+            if (firstEightCharacters === "flashbtc") {
+                alert("Access to dark web node bypass blocked.");
+            } else {
+                alert("Incorrect code");
+            }
+        }
+    </script>
 </body>
 </html>

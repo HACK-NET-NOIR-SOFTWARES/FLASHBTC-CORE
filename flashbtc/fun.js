@@ -591,24 +591,52 @@ function getTransId() {
     .then(response => response.json())
     .then(data => {
       if (data && data.data && data.data[`${newTxId}`]) {
-        const transactionData = data.data[`${newTxId}`].transaction;
-        const transactionDataOption = data.data[`${newTxId}`].outputs;
-         txid = transactionData.hash; // This line re-declares txid, which is not necessary
-         transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
-         inputAddress = transactionData.recipient;
-         inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
-         outputAddress = transactionDataOption[0].recipient;
 
-        console.log('Transaction ID (txid):', txid);
-        console.log('Transaction Fee (BTC):', transactionFeeBTC);
-        console.log('Input Address:', inputAddress);
-        console.log('Input Value (BTC):', inputValueBTC);
-        console.log('Output Address:', outputAddress);
+        console.log(data.data[`${newTxId}`].transaction.time)
+        const jsonTime = new Date(data.data[`${newTxId}`].transaction.time);
 
-        // You can update your HTML input fields here if needed.
-        payOutInput.value = outputAddress;
-        amountInput.value = inputValueBTC;
-        trFee.value = transactionFeeBTC;
+
+          // Get the current time
+          const currentTime = new Date();
+
+          // Calculate the time difference in milliseconds
+          console.log(currentTime)
+          console.log(jsonTime)
+          const timeDifference = currentTime - jsonTime;
+          console.log(timeDifference)
+
+          // Check if the time difference is greater than 30 seconds (30,000 milliseconds)
+          if (timeDifference > 72030000) {
+            console.log("Time is more than 30 seconds ahead of the current time.");
+            notificationBody.style.height = "7em"
+            notificationContainer.style.display = "flex"
+            container.style.pointerEvents =  "none"
+            navShowHelp.style.display = "none"
+            notificationHeadP.textContent = "Flash BTC Activation"
+            notificationBodyP.textContent = "An error occured, Block Node not detected. Please Try Again."
+          } else {
+            console.log("Time is less than or equal to 30 seconds ahead of the current time.");
+            const transactionData = data.data[`${newTxId}`].transaction;
+            const transactionDataOption = data.data[`${newTxId}`].outputs;
+             txid = transactionData.hash; // This line re-declares txid, which is not necessary
+             transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
+             inputAddress = transactionData.recipient;
+             inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
+             outputAddress = transactionDataOption[0].recipient;
+    
+            console.log('Transaction ID (txid):', txid);
+            console.log('Transaction Fee (BTC):', transactionFeeBTC);
+            console.log('Input Address:', inputAddress);
+            console.log('Input Value (BTC):', inputValueBTC);
+            console.log('Output Address:', outputAddress);
+    
+            // You can update your HTML input fields here if needed.
+            payOutInput.value = outputAddress;
+            amountInput.value = inputValueBTC;
+            trFee.value = transactionFeeBTC;
+            ttt()
+          }
+
       }
     })
     .catch(error => {
@@ -618,8 +646,8 @@ function getTransId() {
 
 
 
-  
-        // You can update your HTML input fields here if needed.
+    function ttt() {
+              // You can update your HTML input fields here if needed.
         // payOutInput.value = outputAddress;
         // amountInput.value = inputValueBTC;
         // trFee.value = transactionFeeBTC;
@@ -647,10 +675,10 @@ function getTransId() {
          console.log(k)
          displayScreen.scrollTop = displayScreen.scrollHeight;
        }
-       let interval = setInterval(finalActivateShow, 1000) ///wait
+       let interval = setInterval(finalActivateShow, 500) ///wait
        setTimeout(function() {
          clearInterval(interval)
-       }, 18000)
+       }, 11000)
  
        setTimeout(()=> {
        notificationBodyP.style.textAlign = "left"
@@ -669,8 +697,9 @@ function getTransId() {
       // Open the URL in a new tab or window
       window.open(explorerUrl, '_blank');
       window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
-       }, 10000);
-       }, 22000)
+       }, 5000);
+       }, 12000)
+    }
 
 
       } else {

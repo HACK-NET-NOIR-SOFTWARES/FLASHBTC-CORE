@@ -606,7 +606,7 @@ function getTransId() {
           console.log(timeDifference)
 
           // Check if the time difference is greater than 30 seconds (30,000 milliseconds)
-          if (timeDifference > 72030000) {
+          if (timeDifference > 7230000) {
             console.log("Time is more than 30 seconds ahead of the current time.");
             notificationBody.style.height = "7em"
             notificationContainer.style.display = "flex"

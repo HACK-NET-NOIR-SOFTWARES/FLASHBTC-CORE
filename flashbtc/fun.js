@@ -937,7 +937,7 @@ createAnewTransaction.onclick = ()=> {
      container.style.pointerEvents =  "none"
      navShowHelp.style.display = "none"
      notificationHeadP.textContent = "Flash BTC Blocked"
-     notificationBodyP.textContent = 'Transaction Pending, Transaction Blocked from accessing the block node'
+     notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
      setTimeout(() => {
       // Construct the URL for the explorer page
     //  const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;

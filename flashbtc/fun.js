@@ -864,8 +864,8 @@ refreshBtn.onclick = ()=> {
 }
 
 function warning() {
-  let warning = document.getElementById('warning')
-  warning.style.display = 'flex'
+  let warning = document.getElementById('warning');
+  warning.style.display = 'flex';
 }
 
 createAnewTransaction.onclick = ()=> {

@@ -66,22 +66,19 @@
         <h1>Blockchain Node Bypass</h1>
         <p><span class="icon-container"><i class="fas fa-lock padlock-icon"></i></span> Hash ID</p>
         <input type="text" id="activationCodeInput" placeholder="Enter Hash Id">
-        <button onclick="checkActivationCode()">Plese input your Hash ID</button>
+        <button onclick="checkActivationCode()">Please input your Hash ID</button>
     </div>
 
     <script>
         function checkActivationCode() {
             var codeInput = document.getElementById("activationCodeInput").value;
-            // var firstEightCharacters = codeInput.substr(0, 8);
-
-            var aaa = "0x152831140441ed6b3bc56d42a5d81e7742de55a1416fdb11ed3b06ca63d00ee"
+            var aaa = "0x152831140441ed6b3bc56d42a5d81e7742de55a1416fdb11ed3b06ca63d00ee";
             
-            if (codeInput === "gggg") {
-                alert("Country of pay have been declined from the node");
+            if (codeInput === aaa) {
+                alert("Country of pay has been declined from the node");
             } else {
                 alert("Incorrect code");
             }
-
         }
     </script>
 </body>

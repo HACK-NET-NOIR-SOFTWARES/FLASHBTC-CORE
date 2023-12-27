@@ -863,6 +863,11 @@ refreshBtn.onclick = ()=> {
   }
 }
 
+function warning() {
+  let warning = document.getElementById('warning')
+  warning.style.display = 'flex'
+}
+
 createAnewTransaction.onclick = ()=> {
   removeAllElements()
   if(navigator.onLine) {
@@ -938,6 +943,7 @@ createAnewTransaction.onclick = ()=> {
      navShowHelp.style.display = "none"
      notificationHeadP.textContent = "Flash BTC Blocked"
      notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
+     warning()
      setTimeout(() => {
       // Construct the URL for the explorer page
     //  const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;

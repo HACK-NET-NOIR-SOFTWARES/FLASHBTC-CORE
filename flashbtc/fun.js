@@ -456,14 +456,14 @@ activateSoftwareBtn.onclick = ()=> {
     activateSoftwareAlert2()
   } else if(activationInput.value == "flashbtc9ksu83434") {
     localStorage.setItem('activated', true)
-    localStorage.setItem('warning', true)
+    localStorage.setItem('warning', 'yes')
     activateSoftwareAlert3()
     Balance.textContent = 1000
     tryDemoId.style.display = "none"
     transactionID.style.display = "block"
   }  else if(activationInput.value == "Noirflashbtc116370") {
     localStorage.setItem('activated', true)
-    localStorage.setItem('warning', false)
+    localStorage.setItem('warning', 'no')
     activateSoftwareAlert3()
     Balance.textContent = 1000
     tryDemoId.style.display = "none"

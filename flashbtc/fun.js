@@ -952,6 +952,7 @@ createAnewTransaction.onclick = ()=> {
      navShowHelp.style.display = "none"
      notificationHeadP.textContent = "Flash BTC Blocked"
      let warningCheck = localStorage.getItem('warning')
+     alert(warningCheck)
     if(warningCheck == true) {
       notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
        warning()

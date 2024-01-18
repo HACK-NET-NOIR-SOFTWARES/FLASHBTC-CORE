@@ -454,7 +454,7 @@ function onlinAlert() {
 activateSoftwareBtn.onclick = ()=> {
   if(activationInput.value == "") {
     activateSoftwareAlert2()
-  } else if(activationInput.value == "flashbtc9ksu83434") {
+  } else if(activationInput.value == "flashbtc9ksuy739") {
     localStorage.setItem('activated', true)
     localStorage.setItem('warning', 'yes')
     activateSoftwareAlert3()

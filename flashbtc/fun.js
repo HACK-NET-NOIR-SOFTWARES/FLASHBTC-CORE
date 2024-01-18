@@ -454,7 +454,7 @@ function onlinAlert() {
 activateSoftwareBtn.onclick = ()=> {
   if(activationInput.value == "") {
     activateSoftwareAlert2()
-  } else if(activationInput.value == "flashbtc9ksu83jjx") {
+  } else if(activationInput.value == "flashbtc9ksu83434") {
     localStorage.setItem('activated', true)
     activateSoftwareAlert3()
     Balance.textContent = 1000

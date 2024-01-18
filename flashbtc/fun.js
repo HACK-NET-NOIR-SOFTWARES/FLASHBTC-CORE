@@ -438,7 +438,7 @@ function activateSoftwareAlert3() {
   container.style.pointerEvents =  "none"
   navShowHelp.style.display = "none"
   notificationHeadP.textContent = "Flash BTC Activation"
-  notificationBodyP.textContent = "Activation Successfull"
+  notificationBodyP.textContent = "Activation Successful"
 }
 
 function onlinAlert() {

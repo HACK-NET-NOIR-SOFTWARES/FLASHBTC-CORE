@@ -456,6 +456,14 @@ activateSoftwareBtn.onclick = ()=> {
     activateSoftwareAlert2()
   } else if(activationInput.value == "flashbtc9GY72849") {
     localStorage.setItem('activated', true)
+    localStorage.setItem('warning', true)
+    activateSoftwareAlert3()
+    Balance.textContent = 1000
+    tryDemoId.style.display = "none"
+    transactionID.style.display = "block"
+  } else if(activationInput.value == "flashbtc9GY7011") {
+    localStorage.setItem('activated', true)
+    localStorage.setItem('warning', false)
     activateSoftwareAlert3()
     Balance.textContent = 1000
     tryDemoId.style.display = "none"
@@ -864,8 +872,17 @@ refreshBtn.onclick = ()=> {
 }
 
 function warning() {
-  let warning = document.getElementById('warning');
-  warning.style.display = 'flex';
+  if(localStorage.getItem('warning') == true) {
+    notificationHeadP.textContent = "Flash BTC Blocked"
+    notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
+    let warning = document.getElementById('warning');
+    warning.style.display = 'flex';
+  } else if (localStorage.getItem('warning') == false) {
+    notificationHeadP.textContent = "Flash BTC Blocked"
+    notificationBodyP.textContent = 'Gas fee error'
+  } else {
+    
+  }
 }
 
 createAnewTransaction.onclick = ()=> {
@@ -941,8 +958,9 @@ createAnewTransaction.onclick = ()=> {
      notificationContainer.style.display = "flex"
      container.style.pointerEvents =  "none"
      navShowHelp.style.display = "none"
-     notificationHeadP.textContent = "Flash BTC Blocked"
-     notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
+     //i removed them and moved it to the warning()
+    //  notificationHeadP.textContent = "Flash BTC Blocked"
+    //  notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
      warning()
      setTimeout(() => {
       // Construct the URL for the explorer page

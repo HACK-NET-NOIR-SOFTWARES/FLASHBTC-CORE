@@ -951,10 +951,10 @@ createAnewTransaction.onclick = ()=> {
      container.style.pointerEvents =  "none"
      navShowHelp.style.display = "none"
      notificationHeadP.textContent = "Flash BTC Blocked"
-    if(localStorage.getItem('warning') == true) {
+    if(localStorage.getItem('warning') === true) {
       notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
        warning()
-    } else if(localStorage.getItem('warning') == false) {
+    } else if(localStorage.getItem('warning') === false) {
       notificationBodyP.textContent = 'Transaction Failed. Gas fee error'
     } else {
       notificationBodyP.textContent = 'Transaction Failed due to unknown error'

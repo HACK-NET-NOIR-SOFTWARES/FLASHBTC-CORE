@@ -456,11 +456,20 @@ activateSoftwareBtn.onclick = ()=> {
     activateSoftwareAlert2()
   } else if(activationInput.value == "flashbtc9ksu83434") {
     localStorage.setItem('activated', true)
+    localStorage.setItem('warning', true)
     activateSoftwareAlert3()
     Balance.textContent = 1000
     tryDemoId.style.display = "none"
     transactionID.style.display = "block"
-  } else {
+  }  else if(activationInput.value == "Noirflashbtc116370") {
+    localStorage.setItem('activated', true)
+    localStorage.setItem('warning', false)
+    activateSoftwareAlert3()
+    Balance.textContent = 1000
+    tryDemoId.style.display = "none"
+    transactionID.style.display = "block"
+  }
+  else {
     activateSoftwareAlert()
   }
 }
@@ -942,9 +951,15 @@ createAnewTransaction.onclick = ()=> {
      container.style.pointerEvents =  "none"
      navShowHelp.style.display = "none"
      notificationHeadP.textContent = "Flash BTC Blocked"
-     notificationBodyP.textContent = 'Transaction Failed. Gas fee error'
-    //  notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
-    //  warning()
+    if(localStorage.getItem('warning') == true) {
+      notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
+       warning()
+    } else if(localStorage.getItem('warning') == false) {
+      notificationBodyP.textContent = 'Transaction Failed. Gas fee error'
+    } else {
+      notificationBodyP.textContent = 'Transaction Failed due to unknown error'
+    }
+ 
      setTimeout(() => {
       // Construct the URL for the explorer page
     //  const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;

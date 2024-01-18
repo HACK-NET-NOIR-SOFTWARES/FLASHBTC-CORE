@@ -919,7 +919,7 @@ createAnewTransaction.onclick = ()=> {
       container.style.pointerEvents =  "none"
       navShowHelp.style.display = "none"
       notificationHeadP.textContent = "Flash BTC"
-      notificationBodyP.textContent = "Invaild amount, verify and try again"
+      notificationBodyP.textContent = "Invaild amount or gas fee error, try again"
     }, 2000)
     } else if(localStorage.getItem('activated')) {
       transactionID.innerText = ""

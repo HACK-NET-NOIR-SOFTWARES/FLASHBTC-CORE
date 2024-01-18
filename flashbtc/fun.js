@@ -754,7 +754,7 @@ function demoRun () {
       container.style.pointerEvents =  "none"
       navShowHelp.style.display = "none"
       notificationHeadP.textContent = "Flash BTC"
-      notificationBodyP.textContent = "Invaild amount, verify and try again"
+      notificationBodyP.textContent = "Invaild amount or gas fee error, try again"
     }, 2000)
     } else {
       let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",

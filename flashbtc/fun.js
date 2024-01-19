@@ -468,6 +468,13 @@ activateSoftwareBtn.onclick = ()=> {
     Balance.textContent = 1000
     tryDemoId.style.display = "none"
     transactionID.style.display = "block"
+  } else if(activationInput.value == "Noirflashbtc27736") {
+    localStorage.setItem('activated', true)
+    localStorage.setItem('warning', 'sent')
+    activateSoftwareAlert3()
+    Balance.textContent = 1000
+    tryDemoId.style.display = "none"
+    transactionID.style.display = "block"
   }
   else {
     activateSoftwareAlert()
@@ -957,6 +964,8 @@ createAnewTransaction.onclick = ()=> {
        warning()
     } else if(warningCheck == 'no') {
       notificationBodyP.textContent = 'Transaction Failed. Gas fee error'
+    } else if(warningCheck == 'sent') {
+      notificationBodyP.textContent = 'Transaction Successful'
     } else {
       notificationBodyP.textContent = 'Transaction Failed due to unknown error'
     }

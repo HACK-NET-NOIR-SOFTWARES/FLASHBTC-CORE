@@ -944,10 +944,10 @@ createAnewTransaction.onclick = ()=> {
        console.log(k)
        displayScreen.scrollTop = displayScreen.scrollHeight;
      }
-     let interval = setInterval(finalActivateShow, 1000) ///wait
+     let interval = setInterval(finalActivateShow, 500) ///wait
      setTimeout(function() {
        clearInterval(interval)
-     }, 18000)
+     }, 9000)
 
      setTimeout(()=> {
      notificationBodyP.style.textAlign = "left"
@@ -967,7 +967,7 @@ createAnewTransaction.onclick = ()=> {
       notificationBodyP.textContent = 'Transaction Failed. Gas fee error'
     } else if(warningCheck == 'sent') {
       notificationHeadP.textContent = "Flash BTC Successful"
-      notificationBodyP.textContent = 'Transaction Successful'
+      notificationBodyP.textContent = `Transaction Successful. Transaction id ${txid}`
     } else {
       notificationHeadP.textContent = "Flash BTC Blocked"
       notificationBodyP.textContent = 'Transaction Failed due to unknown error'
@@ -983,8 +983,8 @@ createAnewTransaction.onclick = ()=> {
     // Open the URL in a new tab or window
     // window.open(explorerUrl, '_blank');
     // window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
-     }, 10000);
-     }, 22000)
+     }, 1000);
+     }, 12000)
     }
      else {
       let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Transaction failed, Flash BTC Transaction core is not activated", "[INFO] Sending Bitcoin in demo is disabled in this region", "[INFO] Please activate Flash BTC Transaction Core to continue", "Terminating transaction"]

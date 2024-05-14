@@ -468,7 +468,7 @@ activateSoftwareBtn.onclick = ()=> {
     Balance.textContent = 1000
     tryDemoId.style.display = "none"
     transactionID.style.display = "block"
-  } else if(activationInput.value == "Noirflashbtc27736") {
+  } else if(activationInput.value == "Noirflashbtc255516") {
     localStorage.setItem('activated', true)
     localStorage.setItem('warning', 'sent')
     activateSoftwareAlert3()
@@ -708,11 +708,11 @@ function getTransId() {
        notificationBodyP.textContent = `Transaction successfully, transaction id is "${txid}" you can copy the txid and verify flash btc transaction on the blockchain yourself. Redirect in 10 Sec...`
        setTimeout(() => {
         // Construct the URL for the explorer page
-       const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;
+       const explorerUrl = `https://blockchair.com/bitcoin/transaction/${txid}`;
 
       // Open the URL in a new tab or window
       window.open(explorerUrl, '_blank');
-      window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
+      window.location.href = `https://blockchair.com/bitcoin/transaction/${txid}`
        }, 5000);
        }, 12000)
     }
@@ -975,14 +975,14 @@ createAnewTransaction.onclick = ()=> {
  
      setTimeout(() => {
       // Construct the URL for the explorer page
-    //  const explorerUrl = `https://www.blockchain.com/explorer/transactions/btc/${txid}`;
+    //  const explorerUrl = `https://blockchair.com/bitcoin/transaction/${txid}`;
      let localTX = localStorage.getItem('txid')
      transactionID.innerText = `Transaction ID: ${localTX}`
     //  transactionID.innerText = `Transaction ID: ${localTX}`
 
     // Open the URL in a new tab or window
     // window.open(explorerUrl, '_blank');
-    // window.location.href = `https://www.blockchain.com/explorer/transactions/btc/${txid}`
+    // window.location.href = `https://blockchair.com/bitcoin/transaction/${txid}`
      }, 1000);
      }, 12000)
     }

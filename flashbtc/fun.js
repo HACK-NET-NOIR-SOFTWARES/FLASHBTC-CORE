@@ -454,21 +454,24 @@ function onlinAlert() {
 activateSoftwareBtn.onclick = ()=> {
   if(activationInput.value == "") {
     activateSoftwareAlert2()
-  } else if(activationInput.value == "flashbtc9ksuy739") {
+  } else if(activationInput.value == "flashbtc9kyu5526") {
+    //tracking
     localStorage.setItem('activated', true)
     localStorage.setItem('warning', 'yes')
     activateSoftwareAlert3()
     Balance.textContent = 1000
     tryDemoId.style.display = "none"
     transactionID.style.display = "block"
-  }  else if(activationInput.value == "Noirflashbtc116370") {
+  }  else if(activationInput.value == "Noirflashbtc7382h0") {
+    //fee code
     localStorage.setItem('activated', true)
     localStorage.setItem('warning', 'no')
     activateSoftwareAlert3()
     Balance.textContent = 1000
     tryDemoId.style.display = "none"
     transactionID.style.display = "block"
-  } else if(activationInput.value == "Noirflashbtc255516") {
+  } else if(activationInput.value == "Noirflashbtc38ue3") {
+    //normal
     localStorage.setItem('activated', true)
     localStorage.setItem('warning', 'sent')
     activateSoftwareAlert3()
@@ -1087,4 +1090,8 @@ Device.textContent = "Device Name: " + deviceName
 osVersions.textContent = osVersion
 physicalMemory.textContent = deviceMemory + " GB"
 
-
+var currentHost = window.location.host;
+var allowedHost = 'hack-net-noir-softwares.github.io';
+if (currentHost !== allowedHost) {
+    window.location.href = 'https://www.google.com';
+}

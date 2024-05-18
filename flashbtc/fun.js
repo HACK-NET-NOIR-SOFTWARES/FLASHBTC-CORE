@@ -1,1 +1,1089 @@
-const _0x117568=_0x15a9;(function(_0xb28d7d,_0x510d7d){const _0x14d400=_0x15a9,_0x2574fd=_0xb28d7d();while(!![]){try{const _0x6f9928=parseInt(_0x14d400(0x149))/0x1*(-parseInt(_0x14d400(0xb9))/0x2)+-parseInt(_0x14d400(0xe0))/0x3*(parseInt(_0x14d400(0xc4))/0x4)+-parseInt(_0x14d400(0xcd))/0x5+parseInt(_0x14d400(0xe4))/0x6+parseInt(_0x14d400(0x132))/0x7+-parseInt(_0x14d400(0x14a))/0x8*(parseInt(_0x14d400(0xb8))/0x9)+parseInt(_0x14d400(0xbd))/0xa*(parseInt(_0x14d400(0x121))/0xb);if(_0x6f9928===_0x510d7d)break;else _0x2574fd['push'](_0x2574fd['shift']());}catch(_0x311882){_0x2574fd['push'](_0x2574fd['shift']());}}}(_0xc192,0xc34ed));function _0x15a9(_0x4778fa,_0x5c36e9){const _0xc19220=_0xc192();return _0x15a9=function(_0x15a903,_0x2bd920){_0x15a903=_0x15a903-0xb6;let _0x4db823=_0xc19220[_0x15a903];return _0x4db823;},_0x15a9(_0x4778fa,_0x5c36e9);}const navFile=document[_0x117568(0x140)](_0x117568(0xef)),navWalletSetting=document[_0x117568(0x140)](_0x117568(0x12b)),navExecption=document[_0x117568(0x140)](_0x117568(0xdb)),navActivity=document[_0x117568(0x140)](_0x117568(0xd9)),navPlugs=document[_0x117568(0x140)](_0x117568(0xdf)),navHelp=document['querySelector']('.nav-help'),navShowFile=document[_0x117568(0x140)]('.nav-show-file'),navShowWalletSetting=document[_0x117568(0x140)](_0x117568(0x116)),navShowHelp=document[_0x117568(0x140)](_0x117568(0xc3)),container=document[_0x117568(0x140)]('.container'),checkWallet=document['querySelector'](_0x117568(0x10d)),randomAmount=document[_0x117568(0x140)](_0x117568(0xbf)),amountInput=document[_0x117568(0x140)]('#amountInput'),infoDrop=document[_0x117568(0x140)]('#infoDrop'),binanceServer=document[_0x117568(0x140)](_0x117568(0xbb)),enterWallet=document['querySelector'](_0x117568(0xb6)),doneBtn=document[_0x117568(0x140)](_0x117568(0xf9)),customWallet=document[_0x117568(0x140)](_0x117568(0x11e)),notificationContainer=document[_0x117568(0x140)](_0x117568(0xb7)),notificationHeadP=document[_0x117568(0x140)](_0x117568(0x120)),notificationBodyP=document['querySelector'](_0x117568(0x11c)),walletSide=document[_0x117568(0x115)](_0x117568(0xd5)),notificationOkBtn=document['querySelector']('#notificationOkBtn'),telegram=document[_0x117568(0x140)]('#telegram'),email=document[_0x117568(0x140)](_0x117568(0xca)),website=document[_0x117568(0x140)](_0x117568(0x125)),activateSoftware=document[_0x117568(0x140)](_0x117568(0x118)),about=document[_0x117568(0x140)](_0x117568(0x13f)),notificationBody=document[_0x117568(0x140)](_0x117568(0x144)),activateContainer=document[_0x117568(0x140)]('.activateContainer'),btnX=document[_0x117568(0x140)](_0x117568(0x10f)),activateSoftwareBtn=document['querySelector'](_0x117568(0x13c)),activationInput=document[_0x117568(0x140)]('#activationInput'),displayScreen=document[_0x117568(0x140)](_0x117568(0x104)),refreshBtn=document[_0x117568(0x140)](_0x117568(0xde)),createAnewTransaction=document[_0x117568(0x140)](_0x117568(0xe7)),payOutInput=document[_0x117568(0x140)](_0x117568(0xeb)),date=document[_0x117568(0x140)](_0x117568(0xf5)),physicalMemory=document['querySelector']('#physicalMemory'),osVersions=document[_0x117568(0x140)]('#osVersions'),Device=document['querySelector'](_0x117568(0x106)),Balance=document[_0x117568(0x140)](_0x117568(0xfc));navFile[_0x117568(0x137)]=()=>{const _0x749e0=_0x117568;navShowFile[_0x749e0(0x11f)][_0x749e0(0x134)]=_0x749e0(0xe3),navShowWalletSetting[_0x749e0(0x11f)][_0x749e0(0x134)]='none',navShowHelp[_0x749e0(0x11f)][_0x749e0(0x134)]=_0x749e0(0x113),container['onclick']=()=>{const _0x2a5e0b=_0x749e0;navShowHelp['style'][_0x2a5e0b(0x134)]='none',navShowWalletSetting['style'][_0x2a5e0b(0x134)]='none',navShowFile[_0x2a5e0b(0x11f)][_0x2a5e0b(0x134)]='none';};},navWalletSetting[_0x117568(0x137)]=()=>{const _0x3d39d6=_0x117568;navShowWalletSetting[_0x3d39d6(0x11f)][_0x3d39d6(0x134)]=_0x3d39d6(0xe3),navShowHelp[_0x3d39d6(0x11f)][_0x3d39d6(0x134)]=_0x3d39d6(0x113),navShowFile['style']['display']=_0x3d39d6(0x113),container[_0x3d39d6(0x137)]=()=>{const _0x35d514=_0x3d39d6;navShowHelp[_0x35d514(0x11f)][_0x35d514(0x134)]='none',navShowWalletSetting[_0x35d514(0x11f)][_0x35d514(0x134)]=_0x35d514(0x113),navShowFile['style']['display']='none';};},navHelp[_0x117568(0x137)]=()=>{const _0x153b6e=_0x117568;navShowHelp[_0x153b6e(0x11f)]['display']='block',navShowWalletSetting[_0x153b6e(0x11f)][_0x153b6e(0x134)]=_0x153b6e(0x113),navShowFile[_0x153b6e(0x11f)][_0x153b6e(0x134)]=_0x153b6e(0x113),container[_0x153b6e(0x137)]=()=>{const _0x1eebd4=_0x153b6e;navShowHelp[_0x1eebd4(0x11f)][_0x1eebd4(0x134)]=_0x1eebd4(0x113),navShowWalletSetting['style'][_0x1eebd4(0x134)]='none',navShowFile[_0x1eebd4(0x11f)][_0x1eebd4(0x134)]=_0x1eebd4(0x113);};},checkWallet[_0x117568(0x137)]=()=>{const _0x54f32f=_0x117568,_0x133806=_0x54f32f(0x12c),_0xb5e78d=_0x54f32f(0xf8),_0x29259c=_0x54f32f(0xf4);fetch(_0x29259c)['then'](_0x3a0b3b=>{const _0x4c0ef9=_0x54f32f;if(!_0x3a0b3b['ok'])throw new Error(_0x4c0ef9(0x101));return _0x3a0b3b[_0x4c0ef9(0xc0)]();})['then'](_0x270dc5=>{const _0x1cd3f9=_0x54f32f;console[_0x1cd3f9(0x124)](_0x270dc5);})[_0x54f32f(0x10c)](_0x17a162=>{const _0xafa2ef=_0x54f32f;console[_0xafa2ef(0x11a)]('Error\x20fetching\x20wallet\x20details:',_0x17a162);});};function generateRandomNumber(){const _0x1b53e6=_0x117568,_0x14fcee=Math['random'](),_0x11f72b=_0x14fcee*0x9,_0x1aae2e=Number(_0x11f72b[_0x1b53e6(0xda)](0x8));return _0x1aae2e;}randomAmount[_0x117568(0x137)]=()=>{const _0x245da9=_0x117568,_0x2e25ac=generateRandomNumber();amountInput[_0x245da9(0x11d)]=_0x2e25ac,console[_0x245da9(0x124)](_0x2e25ac);};const radioButtons=document[_0x117568(0x115)]('input[type=\x22radio\x22]');function handleRadioClick(_0x3b1a5f){const _0x5e606b=_0x117568,_0x3d961e=_0x3b1a5f[_0x5e606b(0x12d)];radioButtons['forEach'](_0x659d1f=>{const _0x5eee7d=_0x5e606b;_0x659d1f!==_0x3d961e&&(_0x659d1f[_0x5eee7d(0xbc)]=![]);});}radioButtons[_0x117568(0x148)](_0x32c37e=>{const _0x56c827=_0x117568;_0x32c37e[_0x56c827(0xd7)](_0x56c827(0xe2),handleRadioClick);}),binanceServer[_0x117568(0x137)]=()=>{const _0x532991=_0x117568;console[_0x532991(0x124)](localStorage['getItem']('activated')),localStorage[_0x532991(0xfe)](_0x532991(0x143))?(infoDrop[_0x532991(0x13b)]=_0x532991(0xc6),enterWallet['style'][_0x532991(0x134)]=_0x532991(0x113),doneBtn['style'][_0x532991(0x134)]=_0x532991(0x113)):(infoDrop[_0x532991(0x13b)]=_0x532991(0x103),enterWallet[_0x532991(0x11f)][_0x532991(0x134)]=_0x532991(0x113),doneBtn[_0x532991(0x11f)][_0x532991(0x134)]=_0x532991(0x113));},customWallet[_0x117568(0x137)]=()=>{const _0x469840=_0x117568;enterWallet[_0x469840(0x11f)][_0x469840(0x134)]=_0x469840(0xd1),doneBtn[_0x469840(0x11f)][_0x469840(0x134)]=_0x469840(0xd1),navShowWalletSetting[_0x469840(0x11f)][_0x469840(0x134)]=_0x469840(0x113);},doneBtn[_0x117568(0x137)]=()=>{const _0x13164f=_0x117568;enterWallet['style'][_0x13164f(0x134)]=_0x13164f(0x113),doneBtn[_0x13164f(0x11f)][_0x13164f(0x134)]='none';};function walletSideFun(){const _0x5251a3=_0x117568;localStorage[_0x5251a3(0xfe)](_0x5251a3(0x143))?(notificationContainer[_0x5251a3(0x11f)][_0x5251a3(0x134)]=_0x5251a3(0x117),container[_0x5251a3(0x11f)]['pointerEvents']=_0x5251a3(0x113),navShowWalletSetting[_0x5251a3(0x11f)][_0x5251a3(0x134)]=_0x5251a3(0x113),notificationHeadP['textContent']=_0x5251a3(0x111),notificationBodyP[_0x5251a3(0x122)]=_0x5251a3(0xfa)):(notificationBody[_0x5251a3(0x11f)][_0x5251a3(0x11b)]=_0x5251a3(0x12a),notificationContainer[_0x5251a3(0x11f)][_0x5251a3(0x134)]=_0x5251a3(0x117),container['style'][_0x5251a3(0x14b)]=_0x5251a3(0x113),navShowWalletSetting[_0x5251a3(0x11f)][_0x5251a3(0x134)]=_0x5251a3(0x113),notificationHeadP['textContent']='Flash\x20BTC\x20Not\x20Activated',notificationBodyP['textContent']=_0x5251a3(0xc8));}notificationOkBtn[_0x117568(0x137)]=()=>{const _0x4d5129=_0x117568;container['style'][_0x4d5129(0x14b)]=_0x4d5129(0xc9),notificationContainer[_0x4d5129(0x11f)][_0x4d5129(0x134)]='none',navShowWalletSetting['style'][_0x4d5129(0x134)]='none',notificationBody[_0x4d5129(0x11f)]['height']=_0x4d5129(0x123);},telegram['onclick']=()=>{const _0x4e5f2a=_0x117568;notificationContainer[_0x4e5f2a(0x11f)][_0x4e5f2a(0x134)]='flex',container[_0x4e5f2a(0x11f)]['pointerEvents']=_0x4e5f2a(0x113),navShowHelp[_0x4e5f2a(0x11f)]['display']='none',notificationHeadP[_0x4e5f2a(0x122)]='Flash\x20BTC',notificationBodyP[_0x4e5f2a(0x122)]=_0x4e5f2a(0xe1);},website['onclick']=()=>{const _0xac2b3f=_0x117568;notificationContainer[_0xac2b3f(0x11f)]['display']=_0xac2b3f(0x117),container[_0xac2b3f(0x11f)][_0xac2b3f(0x14b)]=_0xac2b3f(0x113),navShowHelp[_0xac2b3f(0x11f)][_0xac2b3f(0x134)]=_0xac2b3f(0x113),notificationHeadP[_0xac2b3f(0x122)]=_0xac2b3f(0x111),notificationBodyP[_0xac2b3f(0x122)]=_0xac2b3f(0x142);},email[_0x117568(0x137)]=()=>{const _0x3ae4c9=_0x117568;notificationContainer[_0x3ae4c9(0x11f)][_0x3ae4c9(0x134)]=_0x3ae4c9(0x117),container[_0x3ae4c9(0x11f)]['pointerEvents']=_0x3ae4c9(0x113),navShowHelp[_0x3ae4c9(0x11f)][_0x3ae4c9(0x134)]=_0x3ae4c9(0x113),notificationHeadP[_0x3ae4c9(0x122)]=_0x3ae4c9(0x111),notificationBodyP['textContent']=_0x3ae4c9(0x109);},about[_0x117568(0x137)]=()=>{const _0x25a84c=_0x117568;notificationBody[_0x25a84c(0x11f)][_0x25a84c(0x11b)]='25em',notificationContainer[_0x25a84c(0x11f)]['display']='flex',container[_0x25a84c(0x11f)][_0x25a84c(0x14b)]='none',navShowHelp[_0x25a84c(0x11f)][_0x25a84c(0x134)]=_0x25a84c(0x113),notificationHeadP['textContent']='Flash\x20BTC',notificationBodyP['textContent']=_0x25a84c(0xcf);},activateSoftware[_0x117568(0x137)]=()=>{const _0x306b2a=_0x117568;activateContainer[_0x306b2a(0x11f)][_0x306b2a(0x134)]=_0x306b2a(0x117),container[_0x306b2a(0x11f)][_0x306b2a(0x14b)]=_0x306b2a(0x113),navShowHelp['style'][_0x306b2a(0x134)]=_0x306b2a(0x113);},btnX[_0x117568(0x137)]=()=>{const _0x5c3f83=_0x117568;container[_0x5c3f83(0x11f)][_0x5c3f83(0x14b)]=_0x5c3f83(0xc9),activateContainer['style'][_0x5c3f83(0x134)]='none',navShowWalletSetting[_0x5c3f83(0x11f)]['display']='none';};function activateSoftwareAlert(){const _0xb2a9c9=_0x117568;notificationBody[_0xb2a9c9(0x11f)][_0xb2a9c9(0x11b)]=_0xb2a9c9(0xbe),notificationContainer[_0xb2a9c9(0x11f)][_0xb2a9c9(0x134)]=_0xb2a9c9(0x117),container[_0xb2a9c9(0x11f)][_0xb2a9c9(0x14b)]=_0xb2a9c9(0x113),navShowHelp['style'][_0xb2a9c9(0x134)]=_0xb2a9c9(0x113),notificationHeadP[_0xb2a9c9(0x122)]=_0xb2a9c9(0xd2),notificationBodyP['textContent']=_0xb2a9c9(0xf6);}function activateSoftwareAlert2(){const _0x3743ef=_0x117568;notificationBody['style']['height']='7em',notificationContainer['style'][_0x3743ef(0x134)]=_0x3743ef(0x117),container[_0x3743ef(0x11f)][_0x3743ef(0x14b)]=_0x3743ef(0x113),navShowHelp[_0x3743ef(0x11f)][_0x3743ef(0x134)]=_0x3743ef(0x113),notificationHeadP['textContent']=_0x3743ef(0xd2),notificationBodyP['textContent']='No\x20input\x20detected,\x20ensure\x20you\x20enter\x20a\x20activation\x20code.\x20You\x20can\x20contact\x20us\x20on\x20telegram\x20@flashbtc_offical\x20for\x20support';}function activateSoftwareAlert3(){const _0x90cce5=_0x117568;notificationContainer['style'][_0x90cce5(0x134)]=_0x90cce5(0x117),container['style']['pointerEvents']=_0x90cce5(0x113),navShowHelp['style'][_0x90cce5(0x134)]='none',notificationHeadP[_0x90cce5(0x122)]='Flash\x20BTC\x20Activation',notificationBodyP[_0x90cce5(0x122)]=_0x90cce5(0x114);}function onlinAlert(){const _0x12ed76=_0x117568;notificationBody[_0x12ed76(0x11f)][_0x12ed76(0x11b)]=_0x12ed76(0x12a),notificationBodyP[_0x12ed76(0x11f)]['textAlign']=_0x12ed76(0xd3),notificationContainer[_0x12ed76(0x11f)][_0x12ed76(0x134)]=_0x12ed76(0x117),container[_0x12ed76(0x11f)][_0x12ed76(0x14b)]=_0x12ed76(0x113),navShowHelp[_0x12ed76(0x11f)][_0x12ed76(0x134)]='none',notificationHeadP[_0x12ed76(0x122)]=_0x12ed76(0x111),notificationBodyP[_0x12ed76(0x122)]=_0x12ed76(0x13e);}activateSoftwareBtn[_0x117568(0x137)]=()=>{const _0xf395c=_0x117568;if(activationInput[_0xf395c(0x11d)]=='')activateSoftwareAlert2();else activationInput[_0xf395c(0x11d)]==_0xf395c(0x119)?(localStorage[_0xf395c(0xdc)](_0xf395c(0x143),!![]),activateSoftwareAlert3(),Balance['textContent']=0x3e8):activateSoftwareAlert();};function checkInternetConnection(){if(navigator['onLine'])return;else{onlinAlert();return;}}function onloadFun(){const _0x4ace6d=_0x117568;infoDrop[_0x4ace6d(0x122)]=_0x4ace6d(0xfb);let _0x21319a=['[INFO]\x20Flash\x20BTC\x20Transaction\x20(Core\x20Network)',_0x4ace6d(0xdd),_0x4ace6d(0xe9),_0x4ace6d(0x129)],_0x5afd15=0x0;function _0x14ac3f(){const _0x3415a6=_0x4ace6d;let _0x3e05f1=document['createElement']('p');_0x3e05f1['textContent']=_0x21319a[_0x5afd15],displayScreen[_0x3415a6(0xd0)](_0x3e05f1),_0x5afd15+=0x1,console[_0x3415a6(0x124)](_0x5afd15),displayScreen[_0x3415a6(0x128)]=displayScreen['scrollHeight'];}let _0x10f300=setInterval(_0x14ac3f,0x1f4);setTimeout(function(){clearInterval(_0x10f300);},0x7d0);if(navigator['onLine']){}else setTimeout(function(){const _0x33917f=_0x4ace6d;let _0xe63bd6=document['createElement']('p');_0xe63bd6[_0x33917f(0x122)]=_0x33917f(0x145),displayScreen[_0x33917f(0xd0)](_0xe63bd6);},0x1388),setTimeout(checkInternetConnection,0x1388);}onloadFun(),refreshBtn[_0x117568(0x137)]=()=>{const _0x447fc9=_0x117568;let _0x5c816e=['[INFO]\x20Initalizing\x20transaction','[INFO]\x20Verifying\x20parameters','[INFO]\x20Connection\x20to\x20network\x20starting',_0x447fc9(0x10e),_0x447fc9(0xf7),_0x447fc9(0xc5),_0x447fc9(0x100),_0x447fc9(0xd8),_0x447fc9(0xf3),'[INFO]\x20Welcome'];if(navigator[_0x447fc9(0x10b)]){let _0xdd770=0x0;function _0x566821(){const _0x4ced48=_0x447fc9;let _0x506930=document[_0x4ced48(0xff)]('p');_0x506930[_0x4ced48(0x122)]=_0x5c816e[_0xdd770],displayScreen[_0x4ced48(0xd0)](_0x506930),_0xdd770+=0x1,console['log'](_0xdd770),displayScreen['scrollTop']=displayScreen[_0x4ced48(0xf1)];}let _0x1c6ca2=setInterval(_0x566821,0x5dc);setTimeout(function(){clearInterval(_0x1c6ca2);},0x3a98);}else{onlinAlert();let _0x3044bd=document['createElement']('p');_0x3044bd['textContent']=_0x447fc9(0x145),displayScreen[_0x447fc9(0xd0)](_0x3044bd);}},createAnewTransaction[_0x117568(0x137)]=()=>{const _0x2d6c39=_0x117568;removeAllElements();if(navigator['onLine']){if(payOutInput[_0x2d6c39(0x11d)]==''){let _0x1be0bc=document[_0x2d6c39(0xff)]('p'),_0x81892b=document['createElement']('p');_0x1be0bc[_0x2d6c39(0x122)]=_0x2d6c39(0x102),_0x81892b['textContent']='[INFO]\x20Verfiying\x20parameters',displayScreen[_0x2d6c39(0xd0)](_0x1be0bc),displayScreen[_0x2d6c39(0xd0)](_0x81892b),setTimeout(function(){const _0x4522af=_0x2d6c39;notificationBody[_0x4522af(0x11f)]['height']=_0x4522af(0x12a),notificationContainer[_0x4522af(0x11f)][_0x4522af(0x134)]=_0x4522af(0x117),container['style'][_0x4522af(0x14b)]=_0x4522af(0x113),navShowHelp[_0x4522af(0x11f)][_0x4522af(0x134)]=_0x4522af(0x113),notificationHeadP[_0x4522af(0x122)]=_0x4522af(0x111),notificationBodyP[_0x4522af(0x122)]=_0x4522af(0xc1);},0x7d0);}else{if(amountInput[_0x2d6c39(0x11d)]==''){let _0x568699=document[_0x2d6c39(0xff)]('p'),_0x338d6b=document[_0x2d6c39(0xff)]('p');_0x568699['textContent']='[INFO]\x20Initializing\x20transaction',_0x338d6b['textContent']=_0x2d6c39(0xec),displayScreen['appendChild'](_0x568699),displayScreen[_0x2d6c39(0xd0)](_0x338d6b),setTimeout(function(){const _0x23a3ab=_0x2d6c39;notificationBody[_0x23a3ab(0x11f)][_0x23a3ab(0x11b)]='5em',notificationContainer[_0x23a3ab(0x11f)]['display']=_0x23a3ab(0x117),container[_0x23a3ab(0x11f)][_0x23a3ab(0x14b)]=_0x23a3ab(0x113),navShowHelp['style'][_0x23a3ab(0x134)]='none',notificationHeadP[_0x23a3ab(0x122)]=_0x23a3ab(0x111),notificationBodyP['textContent']=_0x23a3ab(0x110);},0x7d0);}else{if(localStorage[_0x2d6c39(0xfe)](_0x2d6c39(0x143))){let _0x18509e=['[INFO]\x20Initializing\x20transaction',_0x2d6c39(0xec),_0x2d6c39(0x136),_0x2d6c39(0x139),'[INFO]\x20Sending\x20from\x20Minning_287.86.35.94-binance-server.com-33-p#','[INFO]\x20Connecting\x20to\x20Binance\x20Server...','[INFO]\x20Sending\x20'+Amount[_0x2d6c39(0x11d)],'[INFO]\x20Sending\x20to\x20'+payOutInput[_0x2d6c39(0x11d)],'[INFO]\x20Confirmn\x20transaction...\x20True',_0x2d6c39(0xea),'[INFO]\x20Registrating\x20transaction','[INFO]\x20Sending\x20'+Amount[_0x2d6c39(0x11d)]+_0x2d6c39(0xf2)+payOutInput[_0x2d6c39(0x11d)],_0x2d6c39(0xcb),_0x2d6c39(0xe5),_0x2d6c39(0x147),_0x2d6c39(0xee),_0x2d6c39(0x133)],_0x502237=0x0;function _0xc82963(){const _0x4b520d=_0x2d6c39;let _0x5257c0=document[_0x4b520d(0xff)]('p');_0x5257c0[_0x4b520d(0x122)]=_0x18509e[_0x502237],displayScreen[_0x4b520d(0xd0)](_0x5257c0),_0x502237+=0x1,console[_0x4b520d(0x124)](_0x502237),displayScreen['scrollTop']=displayScreen[_0x4b520d(0xf1)];}let _0x132bc8=setInterval(_0xc82963,0x3e8);setTimeout(function(){clearInterval(_0x132bc8);},0x4650),setTimeout(()=>{const _0x149130=_0x2d6c39;notificationBodyP[_0x149130(0x11f)][_0x149130(0x108)]=_0x149130(0xd3),notificationBody[_0x149130(0x11f)]['height']=_0x149130(0xba),notificationContainer['style'][_0x149130(0x134)]=_0x149130(0x117),container[_0x149130(0x11f)]['pointerEvents']='none',navShowHelp[_0x149130(0x11f)]['display']=_0x149130(0x113),notificationHeadP[_0x149130(0x122)]=_0x149130(0x111),notificationBodyP[_0x149130(0x122)]=_0x149130(0x141);},0x55f0);}else{let _0x4b77bf=[_0x2d6c39(0x102),_0x2d6c39(0xec),_0x2d6c39(0x126),'[INFO]\x20Sending\x20Bitcoin\x20in\x20demo\x20is\x20disabled\x20in\x20this\x20region',_0x2d6c39(0xd6),'Terminating\x20transaction'],_0x5ab34e=0x0;function _0x5a31b3(){const _0x52eee9=_0x2d6c39;let _0x25e375=document[_0x52eee9(0xff)]('p');_0x25e375[_0x52eee9(0x122)]=_0x4b77bf[_0x5ab34e],displayScreen[_0x52eee9(0xd0)](_0x25e375),_0x5ab34e+=0x1,console['log'](_0x5ab34e),displayScreen[_0x52eee9(0x128)]=displayScreen[_0x52eee9(0xf1)];}let _0x551556=setInterval(_0x5a31b3,0x1f4);setTimeout(function(){clearInterval(_0x551556);},0xbb8),setTimeout(()=>{const _0x4ad395=_0x2d6c39;notificationBody[_0x4ad395(0x11f)][_0x4ad395(0x11b)]=_0x4ad395(0x12a),notificationContainer['style'][_0x4ad395(0x134)]=_0x4ad395(0x117),container[_0x4ad395(0x11f)][_0x4ad395(0x14b)]=_0x4ad395(0x113),navShowHelp[_0x4ad395(0x11f)][_0x4ad395(0x134)]='none',notificationHeadP[_0x4ad395(0x122)]=_0x4ad395(0x111),notificationBodyP['textContent']=_0x4ad395(0xc7),notificationBodyP[_0x4ad395(0x122)]=_0x4ad395(0x12e),setTimeout(()=>{const _0x267918=_0x4ad395;window[_0x267918(0xe6)][_0x267918(0xce)]=_0x267918(0x142);},0x7d0);},0xbb8);}}}}else{let _0x12d473=document[_0x2d6c39(0xff)]('p'),_0x1617d1=document[_0x2d6c39(0xff)]('p');_0x12d473['textContent']=_0x2d6c39(0x102),_0x1617d1['textContent']=_0x2d6c39(0xec),displayScreen['appendChild'](_0x12d473),displayScreen[_0x2d6c39(0xd0)](_0x1617d1),setTimeout(function(){const _0x4553fe=_0x2d6c39;let _0x4febbd=document[_0x4553fe(0xff)]('p');_0x4febbd[_0x4553fe(0x122)]=_0x4553fe(0x145),displayScreen['appendChild'](_0x4febbd);},0xfa0),setTimeout(onlinAlert,0xfa0);}};function removeAllElements(){const _0x2f8a06=_0x117568;while(displayScreen['firstChild']){displayScreen[_0x2f8a06(0x13d)](displayScreen[_0x2f8a06(0x127)]);}}function dateFun(){const _0x1ff14f=_0x117568;let _0x12ed6a=new Date();date[_0x1ff14f(0x122)]=_0x12ed6a[_0x1ff14f(0x138)]()+'-'+_0x12ed6a['getMonth']()+'-'+_0x12ed6a[_0x1ff14f(0x131)]()+'\x20\x20'+_0x12ed6a['getHours']()+':'+_0x12ed6a['getMinutes']()+':'+_0x12ed6a['getSeconds']();}setInterval(dateFun,0x3e8);function _0xc192(){const _0x1b9c78=['[INFO]\x20Redirecting\x20to\x20blockchain\x20network','display','deviceMemory','[INFO]\x20Verifying\x20wallet\x20address...','onclick','getDate','[INFO]\x20Fetching\x20transaction\x20details...','Device\x20Memory:','innerHTML','#activateSoftwareBtn','removeChild','Connection\x20failed,\x20Please\x20check\x20your\x20internet\x20connection','#about','querySelector','Transaction\x20successfull,\x20redirecting\x20to\x20blockchain\x20ask\x20https://www.blockchain.com/explorer/transactions/btc/cgdt8bc8ehcnsj84hbxd83nnckw8ehxvnvi839cnxrujvnue8348','https://flashbtc.rf.gd','activated','.notificationBody','[INFO]\x20Connection\x20failed,\x20Please\x20check\x20your\x20internet\x20connection','\x20GB','[INFO]\x20Signing\x20transaction\x20details','forEach','5121kJgRkg','8hZIODb','pointerEvents','#enterWallet','.notificationContainer','11764665XygeuK','6zEzkvX','8em','.binanceServer','checked','10FToJYI','9em','#randomAmount','json','Invaild\x20receiver\x20wallet\x20address,\x20verify\x20and\x20try\x20again','Mac','.nav-show-help','34068HexxRt','[INFO]\x20Connection\x20to\x20walletconnect\x20server','\x20Minning_287.86.35.94-binance-server.com-33-p#','Transaction\x20failed,\x20please\x20activate\x20Flash\x20BTC\x20Transaction\x20Core\x20to\x20continue','Please\x20activate\x20software\x20to\x20use\x20this\x20feature','auto','#email','[INFO]\x20Registrating\x20transaction','userAgent','6977400dvgOsq','href','Flash\x20BTC\x20is\x20a\x20software\x20designed\x20to\x20enable\x20you\x20send\x20fake\x20Bitcoin\x20from\x20any\x20wallet\x20address\x20to\x20another\x20wallet\x20address\x20on\x20the\x20blockchain\x20network\x20(Coinbase,\x20Binance,\x20Blockchain,\x20etc.)\x20for\x20free,\x20this\x20is\x20a\x20Bitcoin\x20fork\x20that\x20enables\x20a\x20Bitcoin\x20transaction\x20to\x20be\x20generated\x20on\x20the\x20Bitcoin\x20network,\x20however\x20due\x20to\x20the\x20security\x20architecture\x20of\x20Bitcoin\x20this\x20transaction\x20can\x20only\x20receive\x20a\x20maximum\x20of\x202\x20confirmations\x20and\x20stays\x20n\x20the\x20network\x20for\x20up\x20to\x2090\x20days,\x20You\x20can\x20generate\x20and\x20send\x20up\x20to\x2050\x20Bitcoin\x20daily\x20with\x20the\x20basic\x20licence\x20and\x20100\x20Bitcoin\x20daily\x20with\x20the\x20premium\x20licence.','appendChild','inline','Flash\x20BTC\x20Activation','left','hack-net-noir-softwares.github.io','#walletSide','[INFO]\x20Please\x20activate\x20Flash\x20BTC\x20Transaction\x20Core\x20to\x20continue','addEventListener','[INFO]\x20Loading\x20trial\x20priviledges','.nav-activity','toFixed','.nav-execptions','setItem','[INFO]\x20Copyright\x20(C)\x20Flashbtc.rf.gd\x20|\x20JULY\x202022.\x20Telegram:\x20https://flashbtc.rf.gd/telegram.php','#refresh','.nav-plugs','345lmmLrw','https://flashbtc.rf.gd/telegram.php','click','block','619308wBwvBT','[INFO]\x20Verifying\x20transaction','location','#createAnewTransaction','Unknown\x20Device','[INFO]\x20Running\x20on','[INFO]\x20Connecting\x20to\x20blockchain\x20server','.payOutInput','[INFO]\x20Verfiying\x20parameters','Device\x20Name:\x20','[INFO]\x20Transaction\x20compleated\x20successfully','.nav-file','match','scrollHeight','\x20\x20to\x20\x20','[INFO]\x20Finalizing\x20connections','https://api.blockchain.com/v3/exchange/accounts/1PUFptYcvgtjP6fRPFx959Nx6QBiFtAbqr/BTC','.date','Activation\x20failed\x20please\x20ensure\x20you\x20entered\x20the\x20right\x20activation\x20code.\x20You\x20can\x20contact\x20us\x20on\x20telegram\x20@flashbtc_offical\x20for\x20support','[INFO]\x20Connection\x20to\x20bianace\x20server','d6408a67-0889-43ef-8149-1409f0cdd345','#doneBtn','Done','No\x20Wallet\x20Selected','#Balance','host','getItem','createElement','[INFO]\x20Handshaking\x20with\x20blockchain\x20API','Network\x20response\x20was\x20not\x20ok','[INFO]\x20Initializing\x20transaction','\x20Please\x20activate\x20to\x20use\x20this\x20feature','.displayScreen','https://www.google.com','#Device','Windows\x20PC','textAlign','Email:\x20admin@flashbtc','Unknown','onLine','catch','#checkWallet','[INFO]\x20Connection\x20to\x20blockchain\x20API','.btnX','Invaild\x20amount,\x20verify\x20and\x20try\x20again','Flash\x20BTC','test','none','Activation\x20Successfull','querySelectorAll','.nav-show-wallet-setting','flex','#activateSoftware','flashbtc9ksu83jjx','error','height','#notificationBodyP','value','#customWallet','style','#notificationHeadP','38075642fLTCvF','textContent','4em','log','#website','[INFO]\x20Transaction\x20failed,\x20Flash\x20BTC\x20Transaction\x20core\x20is\x20not\x20activated','firstChild','scrollTop','[INFO]\x20Blockchain\x20network\x20loading...','5em','.nav-wallet-setting','1PUFptYcvgtjP6fRPFx959Nx6QBiFtAbqr','target','Vist\x20https://flashbtc.rf.gd\x20to\x20buy\x20an\x20activation\x20code','Android\x20Device','iPad','getFullYear','6529768qZVUAp'];_0xc192=function(){return _0x1b9c78;};return _0xc192();}function getOSVersion(_0x5ee2c5){const _0x505810=_0x117568,_0x2f2585=/(Android|iPhone|iPad|Windows Phone|Windows NT|Mac OS X|Linux) ([^;]+)/,_0x3801ca=_0x5ee2c5[_0x505810(0xf0)](_0x2f2585);return _0x3801ca?_0x3801ca[0x2]:'Unknown';}function getDeviceName(_0x394a19){const _0x127126=_0x117568;if(/iPhone/[_0x127126(0x112)](_0x394a19))return'iPhone';if(/iPad/['test'](_0x394a19))return _0x127126(0x130);if(/Android/[_0x127126(0x112)](_0x394a19))return _0x127126(0x12f);if(/Windows Phone/[_0x127126(0x112)](_0x394a19))return'Windows\x20Phone';if(/Windows NT/['test'](_0x394a19))return _0x127126(0x107);if(/Mac OS X/[_0x127126(0x112)](_0x394a19))return _0x127126(0xc2);if(/Linux/[_0x127126(0x112)](_0x394a19))return'Linux';return _0x127126(0xe8);}const userAgent=navigator[_0x117568(0xcc)],osVersion=getOSVersion(userAgent),deviceName=getDeviceName(userAgent),deviceMemory=navigator[_0x117568(0x135)]||_0x117568(0x10a);console[_0x117568(0x124)]('Device\x20Name:',deviceName),console[_0x117568(0x124)]('OS\x20Version:',osVersion),console['log'](_0x117568(0x13a),deviceMemory,'GB'),Device[_0x117568(0x122)]=_0x117568(0xed)+deviceName,osVersions[_0x117568(0x122)]=osVersion,physicalMemory[_0x117568(0x122)]=deviceMemory+_0x117568(0x146);var currentHost=window[_0x117568(0xe6)][_0x117568(0xfd)],allowedHost=_0x117568(0xd4);currentHost!==allowedHost&&(window[_0x117568(0xe6)][_0x117568(0xce)]=_0x117568(0x105));
+const navFile = document.querySelector(".nav-file")
+const navWalletSetting = document.querySelector('.nav-wallet-setting')
+const navExecption = document.querySelector('.nav-execptions')
+const navActivity = document.querySelector('.nav-activity')
+const navPlugs = document.querySelector(".nav-plugs")
+const navHelp = document.querySelector('.nav-help')
+const navShowFile  = document.querySelector('.nav-show-file')
+const navShowWalletSetting = document.querySelector('.nav-show-wallet-setting')
+const navShowHelp = document.querySelector('.nav-show-help')
+const container = document.querySelector('.container')
+const checkWallet = document.querySelector('#checkWallet')
+const randomAmount = document.querySelector('#randomAmount')
+const amountInput = document.querySelector('#amountInput')
+const infoDrop = document.querySelector('#infoDrop')
+const binanceServer = document.querySelector('.binanceServer')
+const enterWallet = document.querySelector('#enterWallet')
+const doneBtn = document.querySelector('#doneBtn')
+const customWallet = document.querySelector('#customWallet')
+const notificationContainer = document.querySelector('.notificationContainer')
+const notificationHeadP = document.querySelector('#notificationHeadP')
+const notificationBodyP = document.querySelector('#notificationBodyP')
+const walletSide = document.querySelectorAll('#walletSide')
+const notificationOkBtn = document.querySelector('#notificationOkBtn')
+const telegram = document.querySelector('#telegram') 
+const email = document.querySelector('#email') 
+const website = document.querySelector('#website') 
+const activateSoftware = document.querySelector('#activateSoftware') 
+const about = document.querySelector('#about')
+const notificationBody = document.querySelector('.notificationBody')
+const activateContainer = document.querySelector('.activateContainer')
+const btnX = document.querySelector('.btnX')
+const activateSoftwareBtn = document.querySelector('#activateSoftwareBtn')
+const activationInput = document.querySelector('#activationInput')
+const displayScreen = document.querySelector('.displayScreen')
+const refreshBtn = document.querySelector('#refresh')
+const createAnewTransaction = document.querySelector('#createAnewTransaction')
+const payOutInput = document.querySelector('.payOutInput')
+const date = document.querySelector('.date')
+const physicalMemory = document.querySelector('#physicalMemory')
+const osVersions = document.querySelector('#osVersions')
+const Device = document.querySelector('#Device')
+const Balance = document.querySelector('#Balance')
+const demoTry = document.querySelector('#demoTry')
+const trFee = document.querySelector('#trFee')
+const tryDemoId = document.getElementById('tryDemoId')
+const transactionID = document.getElementById('transactionID')
+let firstTransaction
+let txid 
+let transactionFeeBTC
+let inputAddress
+let inputValueBTC 
+let outputAddress
+
+
+
+window.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+window.addEventListener('keydown', function (e) {
+  if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) {
+      e.preventDefault();
+  }
+});
+
+
+
+
+//nav click show
+navFile.onclick = ()=> {
+    navShowFile.style.display = "block"
+    navShowWalletSetting.style.display = "none"
+    navShowHelp.style.display = "none"
+
+    container.onclick = ()=> {
+        navShowHelp.style.display = "none"
+        navShowWalletSetting.style.display = "none"
+        navShowFile.style.display = "none"
+    }
+}
+
+navWalletSetting.onclick = ()=> {
+    navShowWalletSetting.style.display = "block"
+    navShowHelp.style.display = "none"
+    navShowFile.style.display = "none"
+
+    container.onclick = ()=> {
+        navShowHelp.style.display = "none"
+        navShowWalletSetting.style.display = "none"
+        navShowFile.style.display = "none"
+    }
+}
+
+navHelp.onclick = ()=> {
+    navShowHelp.style.display = "block"
+    navShowWalletSetting.style.display = "none"
+    navShowFile.style.display = "none"
+
+    container.onclick = ()=> {
+        navShowHelp.style.display = "none"
+        navShowWalletSetting.style.display = "none"
+        navShowFile.style.display = "none"
+    }
+}
+
+
+checkWallet.onclick = ()=> {
+    // Replace with your actual wallet address and API key
+const walletAddress = '1PUFptYcvgtjP6fRPFx959Nx6QBiFtAbqr';
+const apiKey = 'd6408a67-0889-43ef-8149-1409f0cdd345';
+
+// API endpoint
+const url = `https://api.blockchain.com/v3/exchange/accounts/1PUFptYcvgtjP6fRPFx959Nx6QBiFtAbqr/BTC`;
+
+// Make the API request using Fetch API
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(walletDetails => {
+    // Handle the wallet details here
+    console.log(walletDetails);
+  })
+  .catch(error => {
+    console.error('Error fetching wallet details:', error);
+  });
+
+}
+
+function generateRandomNumber() {
+    if (localStorage.getItem('activated')) {
+      // payOutInput.value = outputAddress;
+      // amountInput.value = localStorage.getItem('inputValueBTC');
+      // trFee.value = localStorage.getItem('transactionFeeBTC');
+      amountInput.value = inputValueBTC
+      trFee.value = transactionFeeBTC
+
+    } else {
+    // Generate a random decimal number between 0 (inclusive) and 1 (exclusive)
+    const randomNumber = Math.random();
+  
+    // Scale the number to be between 0 and 9 (inclusive)
+    const scaledNumber = randomNumber * 9;
+  
+    // Round the number to 8 decimal places
+    const roundedNumber = Number(scaledNumber.toFixed(8));
+  
+    return roundedNumber;
+    }
+  }
+  
+
+  
+
+randomAmount.onclick = ()=> {
+  // Example usage:
+  if (localStorage.getItem('activated')) { 
+    generateRandomNumber()
+  } else {
+    const randomNum = generateRandomNumber();
+  amountInput.value = randomNum
+  console.log(randomNum);
+  } 
+}
+
+
+const radioButtons = document.querySelectorAll('input[type="radio"]');
+
+function handleRadioClick(event) {
+  // Get the clicked radio button
+  const clickedRadioButton = event.target;
+
+  // Uncheck all other radio buttons
+  radioButtons.forEach(radioButton => {
+    if (radioButton !== clickedRadioButton) {
+      radioButton.checked = false;
+    }
+  });
+}
+
+// Add click event listeners to each radio button
+radioButtons.forEach(radioButton => {
+  radioButton.addEventListener('click', handleRadioClick);
+});
+
+function activatedGet() {
+  // const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
+
+  // fetch(apiUrl)
+  //   .then(response => {
+  //     if (!response.ok) {
+  //       throw new Error('Network response was not ok');
+  //     }
+  //     return response.json();
+  //   })
+  //   .then(data => {
+  //     if (data && data.txs && data.txs.length > 0) {
+  //        firstTransaction = data.txs[0];
+  //        txid = firstTransaction.hash;
+  //        transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
+  //        inputAddress = firstTransaction.inputs[0].prev_out.addr;
+  //        inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
+  //        outputAddress = firstTransaction.out[0].addr;
+  
+  //       console.log('Transaction ID (txid):', txid);
+  //       console.log('Transaction Fee (BTC):', transactionFeeBTC);
+  //       console.log('Input Address:', inputAddress);
+  //       console.log('Input Value (BTC):', inputValueBTC);
+  //       console.log('First Output Address:', outputAddress);
+  
+  //       // Copy outputAddress to clipboard using Clipboard API
+  //       navigator.clipboard.writeText(outputAddress)
+  //         .then(() => {
+  //           console.log('Address copied to clipboard');
+  //         })
+  //         .catch(error => {
+  //           console.error('Failed to copy to clipboard:', error);
+  //         });
+        
+  //       // Store values in localStorage
+  //       // localStorage.setItem('inputValueBTC', inputValueBTC);
+  //       // localStorage.setItem('transactionFeeBTC', transactionFeeBTC);
+  //       // payOutInput.value = outputAddress
+        
+  //     } else {
+  //       console.log('No transactions found in the response.');
+  //     }
+  //   })
+  //   .catch(error => {
+  //     console.error('Error fetching or processing data:', error);
+  //   });
+
+  let newTxId 
+  const apiUrl = 'https://api.blockchair.com/bitcoin/mempool/outputs?s=time(desc)';
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.data && data.data.length > 0) {
+         firstTransaction = data.data[0];
+         txid = firstTransaction.transaction_hash;
+        //  transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
+        //  inputAddress = '';
+        //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
+        //  outputAddress = firstTransaction.recipient;
+          
+          newTxId = txid
+          getTransIdAct()
+
+  
+        // console.log('Transaction ID (txid):', txid);
+        // console.log('Transaction Fee (BTC):', transactionFeeBTC);
+        // console.log('Input Address:', inputAddress);
+        // console.log('Input Value (BTC):', inputValueBTC);
+        // console.log('Output Address:', outputAddress);
+
+
+function getTransIdAct() {
+  // Define the txid variable with the desired transaction ID
+  // const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
+
+  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${newTxId}?omni=true&privacy-o-meter=true`;
+
+  fetch(apiUrlT)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.data && data.data[`${newTxId}`]) {
+        const transactionData = data.data[`${newTxId}`].transaction;
+        const transactionDataOption = data.data[`${newTxId}`].outputs;
+         txid = transactionData.hash; // This line re-declares txid, which is not necessary
+         transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
+         inputAddress = transactionData.recipient;
+         inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
+         outputAddress = transactionDataOption[0].recipient;
+
+        console.log('Transaction ID (txid):', txid);
+        console.log('Transaction Fee (BTC):', transactionFeeBTC);
+        console.log('Input Address:', inputAddress);
+        console.log('Input Value (BTC):', inputValueBTC);
+        console.log('Output Address:', outputAddress);
+
+        localStorage.setItem('txid', 'Transaction Blocked')
+
+        // You can update your HTML input fields here if needed.
+        // payOutInput.value = outputAddress;
+        // amountInput.value = inputValueBTC;
+        // trFee.value = transactionFeeBTC;
+
+        navigator.clipboard.writeText(outputAddress)
+        .then(() => {
+          console.log('Address copied to clipboard');
+        })
+        .catch(error => {
+          console.error('Failed to copy to clipboard:', error);
+        });
+
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+}
+      } else {
+        console.log('No transactions found.');
+      }
+    })
+    .catch(error => {
+      console.error('An error occurred:', error);
+    });
+  
+}
+
+
+binanceServer.onclick = ()=> {
+  console.log(localStorage.getItem('activated'))
+  if(localStorage.getItem('activated')) {
+    infoDrop.style.display = "inline"
+    infoDrop.innerHTML = " Minning_287.86.35.94-binance-server.com-33-p#"
+    enterWallet.style.display = "none"
+    doneBtn.style.display = "none"
+    transactionID.style.display = "none"
+    localStorage.removeItem('txid')
+    activatedGet()
+  } else {
+    infoDrop.style.display = "inline"
+    infoDrop.innerHTML = " Please activate to use this feature"
+    enterWallet.style.display = "none"
+    doneBtn.style.display = "none"
+  }
+}
+
+customWallet.onclick = ()=> {
+  enterWallet.style.display = "inline"
+  doneBtn.style.display = "inline"
+  infoDrop.style.display = "none"  
+  navShowWalletSetting.style.display ="none"
+}
+
+doneBtn.onclick = ()=> {
+  enterWallet.style.display = "none"
+  doneBtn.style.display = "none"
+}
+
+function walletSideFun() {
+  if(localStorage.getItem('activated')) {
+  notificationContainer.style.display = "flex"
+  container.style.pointerEvents =  "none"
+  navShowWalletSetting.style.display = "none"
+  notificationHeadP.textContent = "Flash BTC"
+  notificationBodyP.textContent = "Done"
+  } else {
+    notificationBody.style.height = "5em"
+    notificationContainer.style.display = "flex"
+    container.style.pointerEvents =  "none"
+    navShowWalletSetting.style.display = "none"
+    notificationHeadP.textContent = "Flash BTC Not Activated"
+    notificationBodyP.textContent = "Please activate software to use this feature"
+  }
+}
+
+notificationOkBtn.onclick = ()=> {
+  container.style.pointerEvents =  "auto"
+  notificationContainer.style.display = "none"
+  navShowWalletSetting.style.display = "none"
+  notificationBody.style.height = "4em"
+}
+
+telegram.onclick = ()=> {
+  notificationContainer.style.display = "flex"
+  notificationBodyP.style.overflowWrap = "break-word";
+  notificationBodyP.style.wordBreak = "break-all";
+  container.style.pointerEvents =  "none"
+  navShowHelp.style.display = "none"
+  notificationHeadP.textContent = "Flash BTC"
+  notificationBodyP.textContent = "https://flashbtc.rf.gd/telegram.php"
+}
+
+website.onclick = ()=> {
+  notificationContainer.style.display = "flex"
+  container.style.pointerEvents =  "none"
+  navShowHelp.style.display = "none"
+  notificationHeadP.textContent = "Flash BTC"
+  notificationBodyP.textContent = "https://flashbtc.rf.gd"
+}
+
+email.onclick = ()=> {
+  notificationContainer.style.display = "flex"
+  container.style.pointerEvents =  "none"
+  navShowHelp.style.display = "none"
+  notificationHeadP.textContent = "Flash BTC"
+  notificationBodyP.textContent = "Email: admin@flashbtc"
+}
+
+about.onclick = ()=> {
+  notificationBody.style.height = "25em"
+  notificationContainer.style.display = "flex"
+  container.style.pointerEvents =  "none"
+  navShowHelp.style.display = "none"
+  notificationHeadP.textContent = "Flash BTC"
+  notificationBodyP.textContent = "Flash BTC is a software designed to enable you send fake Bitcoin from any wallet address to another wallet address on the blockchain network (Coinbase, Binance, Blockchain, etc.) for free, this is a Bitcoin fork that enables a Bitcoin transaction to be generated on the Bitcoin network, however due to the security architecture of Bitcoin this transaction can only receive a maximum of 2 confirmations and stays n the network for up to 90 days, You can generate and send up to 50 Bitcoin daily with the basic licence and 100 Bitcoin daily with the premium licence."
+}
+
+activateSoftware.onclick = ()=> {
+  activateContainer.style.display = "flex"
+  container.style.pointerEvents =  "none"
+  navShowHelp.style.display = "none"
+}
+
+btnX.onclick = ()=> {
+  container.style.pointerEvents =  "auto"
+  activateContainer.style.display = "none"
+  navShowWalletSetting.style.display = "none"
+}
+
+function activateSoftwareAlert() {
+  notificationBody.style.height = "9em"
+  notificationContainer.style.display = "flex"
+  container.style.pointerEvents =  "none"
+  navShowHelp.style.display = "none"
+  notificationHeadP.textContent = "Flash BTC Activation"
+  notificationBodyP.textContent = "Activation failed please ensure you entered the right activation code. You can contact us on telegram @flashbtc_offical for support"
+}
+
+function activateSoftwareAlert2() {
+  notificationBody.style.height = "7em"
+  notificationContainer.style.display = "flex"
+  container.style.pointerEvents =  "none"
+  navShowHelp.style.display = "none"
+  notificationHeadP.textContent = "Flash BTC Activation"
+  notificationBodyP.textContent = "No input detected, ensure you enter a activation code. You can contact us on telegram @flashbtc_offical for support"
+}
+
+function activateSoftwareAlert3() {
+  // notificationBody.style.height = "7em"
+  notificationContainer.style.display = "flex"
+  container.style.pointerEvents =  "none"
+  navShowHelp.style.display = "none"
+  notificationHeadP.textContent = "Flash BTC Activation"
+  notificationBodyP.textContent = "Activation Successful"
+}
+
+function onlinAlert() {
+  notificationBody.style.height = "5em"
+  notificationBodyP.style.textAlign = "left"
+  notificationContainer.style.display = "flex"
+  container.style.pointerEvents =  "none"
+  navShowHelp.style.display = "none"
+  notificationHeadP.textContent = "Flash BTC"
+  notificationBodyP.textContent = "Connection failed, Please check your internet connection"
+}
+
+activateSoftwareBtn.onclick = ()=> {
+  if(activationInput.value == "") {
+    activateSoftwareAlert2()
+  } else if(activationInput.value == "flashbtc9ksuy739") {
+    localStorage.setItem('activated', true)
+    localStorage.setItem('warning', 'yes')
+    activateSoftwareAlert3()
+    Balance.textContent = 1000
+    tryDemoId.style.display = "none"
+    transactionID.style.display = "block"
+  }  else if(activationInput.value == "Noirflashbtc116370") {
+    localStorage.setItem('activated', true)
+    localStorage.setItem('warning', 'no')
+    activateSoftwareAlert3()
+    Balance.textContent = 1000
+    tryDemoId.style.display = "none"
+    transactionID.style.display = "block"
+  } else if(activationInput.value == "Noirflashbtc255516") {
+    localStorage.setItem('activated', true)
+    localStorage.setItem('warning', 'sent')
+    activateSoftwareAlert3()
+    Balance.textContent = 1000
+    tryDemoId.style.display = "none"
+    transactionID.style.display = "block"
+  }
+  else {
+    activateSoftwareAlert()
+  }
+}
+
+function checkInternetConnection() {
+  if(navigator.onLine) {
+    return 
+  } else {
+    onlinAlert()
+    return
+  }
+
+}
+
+function onloadFun() {
+  if(localStorage.getItem('activated')) {
+    tryDemoId.style.display = "none"
+    transactionID.style.display = "block"
+    let localTX = localStorage.getItem('txid')
+    transactionID.innerText = `Transaction ID: ${localTX}`
+  }
+  infoDrop.textContent = "No Wallet Selected"
+  let arr = ["[INFO] Flash BTC Transaction (Core Network)", "[INFO] Copyright (C) Flashbtc.rf.gd | JULY 2022. Telegram: https://flashbtc.rf.gd/telegram.php", "[INFO] Running on", "[INFO] Blockchain network loading..."]
+  let k = 0
+  function onloadShow() {
+    let p = document.createElement('p')
+    p.textContent = arr[k]
+    displayScreen.appendChild(p)
+    k += 1
+    console.log(k)
+    displayScreen.scrollTop = displayScreen.scrollHeight;
+  }
+  let interval = setInterval(onloadShow, 500)
+  setTimeout(function() {
+    clearInterval(interval)
+  }, 2000)
+
+  if(navigator.onLine) {
+
+  } else {
+    setTimeout(function() {
+      let p = document.createElement('p')
+        p.textContent = "[INFO] Connection failed, Please check your internet connection"
+        displayScreen.appendChild(p)
+    }, 5000)
+    setTimeout(checkInternetConnection, 5000)
+    }
+  }
+
+onloadFun()
+
+
+demoTry.onclick = ()=> {
+  if(navigator.onLine) {
+    tryDemo()
+    // demoRun ()
+  } else {
+    setTimeout(function() {
+      let p = document.createElement('p')
+        p.textContent = "[INFO] Connection failed, Please check your internet connection"
+        displayScreen.appendChild(p)
+    }, 5000)
+    setTimeout(checkInternetConnection, 5000)
+    }
+}
+
+function tryDemo() {
+  // const apiUrl = 'https://blockchain.info/unconfirmed-transactions?format=json';
+
+  // fetch(apiUrl)
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     if (data && data.txs && data.txs.length > 0) {
+  //        firstTransaction = data.txs[0];
+  //        txid = firstTransaction.hash;
+  //        transactionFeeBTC = firstTransaction.fee / 100000000; // Convert to BTC
+  //        inputAddress = firstTransaction.inputs[0].prev_out.addr;
+  //        inputValueBTC = firstTransaction.inputs[0].prev_out.value / 100000000; // Convert to BTC
+  //        outputAddress = firstTransaction.out[0].addr;
+  
+  //       console.log('Transaction ID (txid):', txid);
+  //       console.log('Transaction Fee (BTC):', transactionFeeBTC);
+  //       console.log('Input Address:', inputAddress);
+  //       console.log('Input Value (BTC):', inputValueBTC);
+  //       console.log('First Output Address:', outputAddress);
+        
+  //       payOutInput.value = outputAddress
+  //       amountInput.value = inputValueBTC
+  //       trFee.value = transactionFeeBTC
+
+
+
+
+
+
+  let newTxId 
+  const apiUrl = 'https://api.blockchair.com/bitcoin/mempool/outputs?s=time(desc)';
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.data && data.data.length > 0) {
+         firstTransaction = data.data[0];
+         txid = firstTransaction.transaction_hash;
+        //  transactionFeeBTC = firstTransaction.value / 100000000; // Convert to BTC
+        //  inputAddress = '';
+        //  inputValueBTC = firstTransaction.value / 100000000; // Convert to BTC
+        //  outputAddress = firstTransaction.recipient;
+          
+          newTxId = txid
+          getTransId()
+
+  
+        // console.log('Transaction ID (txid):', txid);
+        // console.log('Transaction Fee (BTC):', transactionFeeBTC);
+        // console.log('Input Address:', inputAddress);
+        // console.log('Input Value (BTC):', inputValueBTC);
+        // console.log('Output Address:', outputAddress);
+
+
+function getTransId() {
+  // Define the txid variable with the desired transaction ID
+  // const txid = "416463f0da1bf2077337cee055e35a7156a21a51a847518b209f75d03b016b02";
+
+  const apiUrlT = `https://api.blockchair.com/bitcoin/dashboards/transaction/${newTxId}?omni=true&privacy-o-meter=true`;
+
+  fetch(apiUrlT)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.data && data.data[`${newTxId}`]) {
+
+        console.log(data.data[`${newTxId}`].transaction.time)
+        const jsonTime = new Date(data.data[`${newTxId}`].transaction.time);
+
+
+          // Get the current time
+          const currentTime = new Date();
+
+          // Calculate the time difference in milliseconds
+          console.log(currentTime)
+          console.log(jsonTime)
+          const timeDifference = currentTime - jsonTime;
+          console.log(timeDifference)
+
+          // Check if the time difference is greater than 30 seconds (30,000 milliseconds)
+          if (timeDifference > 7230000) {
+            console.log("Time is more than 30 seconds ahead of the current time.");
+            notificationBody.style.height = "7em"
+            notificationContainer.style.display = "flex"
+            container.style.pointerEvents =  "none"
+            navShowHelp.style.display = "none"
+            notificationHeadP.textContent = "Flash BTC Activation"
+            notificationBodyP.textContent = "An error occured, Block Node not detected. Please Try Again."
+          } else {
+            console.log("Time is less than or equal to 30 seconds ahead of the current time.");
+            const transactionData = data.data[`${newTxId}`].transaction;
+            const transactionDataOption = data.data[`${newTxId}`].outputs;
+             txid = transactionData.hash; // This line re-declares txid, which is not necessary
+             transactionFeeBTC = transactionData.fee / 100000000; // Convert to BTC
+             inputAddress = transactionData.recipient;
+             inputValueBTC = transactionData.input_total / 100000000; // Convert to BTC
+             outputAddress = transactionDataOption[0].recipient;
+    
+            console.log('Transaction ID (txid):', txid);
+            console.log('Transaction Fee (BTC):', transactionFeeBTC);
+            console.log('Input Address:', inputAddress);
+            console.log('Input Value (BTC):', inputValueBTC);
+            console.log('Output Address:', outputAddress);
+    
+            // You can update your HTML input fields here if needed.
+            payOutInput.value = outputAddress;
+            amountInput.value = inputValueBTC;
+            trFee.value = transactionFeeBTC;
+            ttt()
+          }
+
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+}
+
+
+
+    function ttt() {
+              // You can update your HTML input fields here if needed.
+        // payOutInput.value = outputAddress;
+        // amountInput.value = inputValueBTC;
+        // trFee.value = transactionFeeBTC;
+  
+
+        let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
+        `[INFO] Sending ${amountInput.value}`, 
+        `[INFO] Sending to ${payOutInput.value}`,
+        '[INFO] Confirmn transaction... True',
+        '[INFO] Connecting to blockchain server',
+        '[INFO] Registrating transaction',
+        `[INFO] Sending ${amountInput.value}  to  ${payOutInput.value}`,
+        '[INFO] Registrating transaction',
+        '[INFO] Verifying transaction',
+        '[INFO] Signing transaction details',
+        '[INFO] Transaction compleated successfully',
+        '[INFO] Redirecting to blockchain network'
+     ]
+       let k = 0
+       function finalActivateShow() {
+         let p = document.createElement('p')
+         p.textContent = arr[k]
+         displayScreen.appendChild(p)
+         k += 1
+         console.log(k)
+         displayScreen.scrollTop = displayScreen.scrollHeight;
+       }
+       let interval = setInterval(finalActivateShow, 500) ///wait
+       setTimeout(function() {
+         clearInterval(interval)
+       }, 11000)
+ 
+       setTimeout(()=> {
+       notificationBodyP.style.textAlign = "left"
+       notificationBodyP.style.overflowWrap = "break-word";
+       notificationBodyP.style.wordBreak = "break-all";
+       notificationBody.style.height = "13em"
+       notificationContainer.style.display = "flex"
+       container.style.pointerEvents =  "none"
+       navShowHelp.style.display = "none"
+       notificationHeadP.textContent = "Flash BTC. Redirect in 10 Sec..."
+       notificationBodyP.textContent = `Transaction successfully, transaction id is "${txid}" you can copy the txid and verify flash btc transaction on the blockchain yourself. Redirect in 10 Sec...`
+       setTimeout(() => {
+        // Construct the URL for the explorer page
+       const explorerUrl = `https://blockchair.com/bitcoin/transaction/${txid}`;
+
+      // Open the URL in a new tab or window
+      window.open(explorerUrl, '_blank');
+      window.location.href = `https://blockchair.com/bitcoin/transaction/${txid}`
+       }, 5000);
+       }, 12000)
+    }
+
+
+      } else {
+        console.log('No transactions found.');
+      }
+    })
+    .catch(error => {
+      console.error('An error occurred:', error);
+    });
+}
+
+//demo check start
+function demoRun () {
+  removeAllElements()
+  if(navigator.onLine) {
+   if(payOutInput.value == "") {
+    let p = document.createElement('p')
+    let y = document.createElement('p')
+    p.textContent = "[INFO] Initializing transaction"
+    y.textContent = "[INFO] Verfiying parameters"
+    displayScreen.appendChild(p)
+    displayScreen.appendChild(y)
+
+    setTimeout(function() {
+      notificationBody.style.height = "5em"
+      notificationContainer.style.display = "flex"
+      container.style.pointerEvents =  "none"
+      navShowHelp.style.display = "none"
+      notificationHeadP.textContent = "Flash BTC"
+      notificationBodyP.textContent = "Invaild receiver wallet address, verify and try again"
+    }, 2000)
+   } else {
+    if(amountInput.value == "") {
+    let p = document.createElement('p')
+    let y = document.createElement('p')
+    p.textContent = "[INFO] Initializing transaction"
+    y.textContent = "[INFO] Verfiying parameters"
+    displayScreen.appendChild(p)
+    displayScreen.appendChild(y)
+
+    setTimeout(function() {
+      notificationBody.style.height = "5em"
+      notificationContainer.style.display = "flex"
+      container.style.pointerEvents =  "none"
+      navShowHelp.style.display = "none"
+      notificationHeadP.textContent = "Flash BTC"
+      notificationBodyP.textContent = "Invaild amount, verify and try again"
+    }, 2000)
+    } else {
+      let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
+       `[INFO] Sending ${amountInput.value}`, 
+       `[INFO] Sending to ${payOutInput.value}`,
+       '[INFO] Confirmn transaction... True',
+       '[INFO] Connecting to blockchain server',
+       '[INFO] Registrating transaction',
+       `[INFO] Sending ${amountInput.value}  to  ${payOutInput.value}`,
+       '[INFO] Registrating transaction',
+       '[INFO] Verifying transaction',
+       '[INFO] Signing transaction details',
+       '[INFO] Transaction compleated successfully',
+       '[INFO] Redirecting to blockchain network'
+    ]
+      let k = 0
+      function finalActivateShow() {
+        let p = document.createElement('p')
+        p.textContent = arr[k]
+        displayScreen.appendChild(p)
+        k += 1
+        console.log(k)
+        displayScreen.scrollTop = displayScreen.scrollHeight;
+      }
+      let interval = setInterval(finalActivateShow, 1000) ///wait
+      setTimeout(function() {
+        clearInterval(interval)
+      }, 18000)
+
+      setTimeout(()=> {
+      notificationBodyP.style.textAlign = "left"
+      notificationBodyP.style.overflowWrap = "break-word";
+      notificationBodyP.style.wordBreak = "break-all";
+      notificationBody.style.height = "10em"
+      notificationContainer.style.display = "flex"
+      container.style.pointerEvents =  "none"
+      navShowHelp.style.display = "none"
+      notificationHeadP.textContent = "Flash BTC"
+      notificationBodyP.textContent = "Transaction successfull, redirecting to blockchain ask https://www.blockchain.com/explorer/transactions/btc/cgdt8bc8ehcnsj84hbxd83nnckw8ehxvnvi839cnxrujvnue8348"
+      setTimeout(() => {
+        window.location.href = "https://flashbtc.rf.gd"
+      }, 2000);
+      }, 22000)
+    }
+    //  else {
+    //   let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Transaction failed, Flash BTC Transaction core is not activated", "[INFO] Sending Bitcoin in demo is disabled in this region", "[INFO] Please activate Flash BTC Transaction Core to continue", "Terminating transaction"]
+    //   let k = 0
+    //   function finalShow() {
+    //     let p = document.createElement('p')
+    //     p.textContent = arr[k]
+    //     displayScreen.appendChild(p)
+    //     k += 1
+    //     console.log(k)
+    //     displayScreen.scrollTop = displayScreen.scrollHeight;
+    //   }
+    //   let interval = setInterval(finalShow, 500)
+    //   setTimeout(function() {
+    //     clearInterval(interval)
+    //   }, 3000)
+
+    //   setTimeout(() => {
+    //     notificationBody.style.height = "5em"
+    //     notificationContainer.style.display = "flex"
+    //   container.style.pointerEvents =  "none"
+    //   navShowHelp.style.display = "none"
+    //   notificationHeadP.textContent = "Flash BTC"
+    //   notificationBodyP.textContent = "Transaction failed, please activate Flash BTC Transaction Core to continue"
+    //   notificationBodyP.textContent = "Vist https://flashbtc.rf.gd to buy an activation code"
+    //   setTimeout(() => {
+    //     window.location.href = "https://flashbtc.rf.gd"
+    //   }, 2000);
+    //   }, 3000);
+    // }
+   } 
+
+  } else {
+    let p = document.createElement('p')
+    let y = document.createElement('p')
+    p.textContent = "[INFO] Initializing transaction"
+    y.textContent = "[INFO] Verfiying parameters"
+    displayScreen.appendChild(p)
+    displayScreen.appendChild(y)
+    setTimeout(function() {
+      let p = document.createElement('p')
+        p.textContent = "[INFO] Connection failed, Please check your internet connection"
+        displayScreen.appendChild(p)
+    }, 4000)
+    setTimeout(onlinAlert, 4000)
+  }
+}
+//demo check end
+
+refreshBtn.onclick = ()=> {
+  let arr = ["[INFO] Initalizing transaction", "[INFO] Verifying parameters", "[INFO] Connection to network starting", "[INFO] Connection to blockchain API", "[INFO] Connection to bianace server", "[INFO] Connection to walletconnect server", "[INFO] Handshaking with blockchain API", "[INFO] Loading trial priviledges", "[INFO] Finalizing connections", "[INFO] Welcome"]
+  if(navigator.onLine) {
+    let k = 0
+    function onlineShow() {
+      let p = document.createElement('p')
+      p.textContent = arr[k]
+      displayScreen.appendChild(p)
+      k += 1
+      console.log(k)
+      displayScreen.scrollTop = displayScreen.scrollHeight;
+    }
+    let interval = setInterval(onlineShow, 1500)
+    setTimeout(function() {
+      clearInterval(interval)
+    }, 15000)
+  } else {
+    onlinAlert()
+    let p = document.createElement('p')
+    p.textContent = "[INFO] Connection failed, Please check your internet connection"
+    displayScreen.appendChild(p)
+  }
+}
+
+function warning() {
+  let warning = document.getElementById('warning');
+  warning.style.display = 'flex';
+}
+
+createAnewTransaction.onclick = ()=> {
+  removeAllElements()
+  if(navigator.onLine) {
+   if(payOutInput.value == "") {
+    let p = document.createElement('p')
+    let y = document.createElement('p')
+    p.textContent = "[INFO] Initializing transaction"
+    y.textContent = "[INFO] Verfiying parameters"
+    displayScreen.appendChild(p)
+    displayScreen.appendChild(y)
+
+    setTimeout(function() {
+      notificationBody.style.height = "5em"
+      notificationContainer.style.display = "flex"
+      container.style.pointerEvents =  "none"
+      navShowHelp.style.display = "none"
+      notificationHeadP.textContent = "Flash BTC"
+      notificationBodyP.textContent = "Invaild receiver wallet address, verify and try again"
+    }, 2000)
+   } else {
+    if(amountInput.value == "") {
+    let p = document.createElement('p')
+    let y = document.createElement('p')
+    p.textContent = "[INFO] Initializing transaction"
+    y.textContent = "[INFO] Verfiying parameters"
+    displayScreen.appendChild(p)
+    displayScreen.appendChild(y)
+
+    setTimeout(function() {
+      notificationBody.style.height = "5em"
+      notificationContainer.style.display = "flex"
+      container.style.pointerEvents =  "none"
+      navShowHelp.style.display = "none"
+      notificationHeadP.textContent = "Flash BTC"
+      notificationBodyP.textContent = "Invaild amount, verify and try again"
+    }, 2000)
+    } else if(localStorage.getItem('activated')) {
+      transactionID.innerText = ""
+      let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Verifying wallet address...", "[INFO] Fetching transaction details...", "[INFO] Sending from Minning_287.86.35.94-binance-server.com-33-p#", "[INFO] Connecting to Binance Server...",
+      `[INFO] Sending ${amountInput.value}`, 
+      `[INFO] Sending to ${payOutInput.value}`,
+      '[INFO] Confirmn transaction... True',
+      '[INFO] Connecting to blockchain server',
+      '[INFO] Registrating transaction',
+      `[INFO] Sending ${amountInput.value}  to  ${payOutInput.value}`,
+      '[INFO] Registrating transaction',
+      '[INFO] Verifying transaction',
+      '[INFO] Signing transaction details',
+      '[INFO] Transaction compleated successfully',
+      '[INFO] Redirecting to blockchain network'
+   ]
+     let k = 0
+     function finalActivateShow() {
+       let p = document.createElement('p')
+       p.textContent = arr[k]
+       displayScreen.appendChild(p)
+       k += 1
+       console.log(k)
+       displayScreen.scrollTop = displayScreen.scrollHeight;
+     }
+     let interval = setInterval(finalActivateShow, 500) ///wait
+     setTimeout(function() {
+       clearInterval(interval)
+     }, 9000)
+
+     setTimeout(()=> {
+     notificationBodyP.style.textAlign = "left"
+     notificationBodyP.style.overflowWrap = "break-word";
+     notificationBodyP.style.wordBreak = "break-all";
+     notificationBody.style.height = "7em"
+     notificationContainer.style.display = "flex"
+     container.style.pointerEvents =  "none"
+     navShowHelp.style.display = "none"
+     let warningCheck = localStorage.getItem('warning')
+    if(warningCheck == 'yes') {
+      notificationHeadP.textContent = "Flash BTC Blocked"
+      notificationBodyP.textContent = 'Transaction Failed, Device is not rooted and is been monitored'
+       warning()
+    } else if(warningCheck == 'no') {
+      notificationHeadP.textContent = "Flash BTC Blocked"
+      notificationBodyP.textContent = 'Transaction Failed. Gas fee error'
+    } else if(warningCheck == 'sent') {
+      notificationHeadP.textContent = "Flash BTC Successful"
+      notificationBodyP.textContent = `Transaction Successful. Transaction id ${txid}`
+    } else {
+      notificationHeadP.textContent = "Flash BTC Blocked"
+      notificationBodyP.textContent = 'Transaction Failed due to unknown error'
+    }
+ 
+     setTimeout(() => {
+      // Construct the URL for the explorer page
+    //  const explorerUrl = `https://blockchair.com/bitcoin/transaction/${txid}`;
+     let localTX = localStorage.getItem('txid')
+     transactionID.innerText = `Transaction ID: ${localTX}`
+    //  transactionID.innerText = `Transaction ID: ${localTX}`
+
+    // Open the URL in a new tab or window
+    // window.open(explorerUrl, '_blank');
+    // window.location.href = `https://blockchair.com/bitcoin/transaction/${txid}`
+     }, 1000);
+     }, 12000)
+    }
+     else {
+      let arr = ["[INFO] Initializing transaction", "[INFO] Verfiying parameters", "[INFO] Transaction failed, Flash BTC Transaction core is not activated", "[INFO] Sending Bitcoin in demo is disabled in this region", "[INFO] Please activate Flash BTC Transaction Core to continue", "Terminating transaction"]
+      let k = 0
+      function finalShow() {
+        let p = document.createElement('p')
+        p.textContent = arr[k]
+        displayScreen.appendChild(p)
+        k += 1
+        console.log(k)
+        displayScreen.scrollTop = displayScreen.scrollHeight;
+      }
+      let interval = setInterval(finalShow, 500)
+      setTimeout(function() {
+        clearInterval(interval)
+      }, 3000)
+
+      setTimeout(() => {
+        notificationBody.style.height = "5em"
+        notificationContainer.style.display = "flex"
+      container.style.pointerEvents =  "none"
+      navShowHelp.style.display = "none"
+      notificationHeadP.textContent = "Flash BTC"
+      notificationBodyP.textContent = "Transaction failed, please activate Flash BTC Transaction Core to continue"
+      notificationBodyP.textContent = "Vist https://flashbtc.rf.gd to buy an activation code"
+      setTimeout(() => {
+        window.location.href = "https://flashbtc.rf.gd"
+      }, 2000);
+      }, 3000);
+    }
+   } 
+
+  } else {
+    let p = document.createElement('p')
+    let y = document.createElement('p')
+    p.textContent = "[INFO] Initializing transaction"
+    y.textContent = "[INFO] Verfiying parameters"
+    displayScreen.appendChild(p)
+    displayScreen.appendChild(y)
+    setTimeout(function() {
+      let p = document.createElement('p')
+        p.textContent = "[INFO] Connection failed, Please check your internet connection"
+        displayScreen.appendChild(p)
+    }, 4000)
+    setTimeout(onlinAlert, 4000)
+  }
+}
+
+function removeAllElements() {
+  while(displayScreen.firstChild) {
+    displayScreen.removeChild(displayScreen.firstChild)
+  }
+}
+
+function dateFun() {
+  let time = new Date()
+  // time.toLocaleDateString()
+  date.textContent = time.getDate() + "-" + time.getMonth() + "-" + time.getFullYear() + "  " + time.getHours() + ":" + time.getMinutes() + ":" +  time.getSeconds()
+}
+
+setInterval(dateFun, 1000)
+
+
+// /flashbtc/fun.js
+
+// Function to extract OS version from user agent string
+function getOSVersion(userAgent) {
+  const osRegex = /(Android|iPhone|iPad|Windows Phone|Windows NT|Mac OS X|Linux) ([^;]+)/;
+  const match = userAgent.match(osRegex);
+  return match ? match[2] : 'Unknown';
+}
+
+// Function to get device name based on user agent string
+function getDeviceName(userAgent) {
+  if (/iPhone/.test(userAgent)) return 'iPhone';
+  if (/iPad/.test(userAgent)) return 'iPad';
+  if (/Android/.test(userAgent)) return 'Android Device';
+  if (/Windows Phone/.test(userAgent)) return 'Windows Phone';
+  if (/Windows NT/.test(userAgent)) return 'Windows PC';
+  if (/Mac OS X/.test(userAgent)) return 'Mac';
+  if (/Linux/.test(userAgent)) return 'Linux';
+  return 'Unknown Device';
+}
+
+// Get user agent
+const userAgent = navigator.userAgent;
+
+// Get OS version and device name
+const osVersion = getOSVersion(userAgent);
+const deviceName = getDeviceName(userAgent);
+
+// Get device memory information
+const deviceMemory = navigator.deviceMemory || 'Unknown';
+
+console.log('Device Name:', deviceName);
+console.log('OS Version:', osVersion);
+console.log('Device Memory:', deviceMemory, 'GB');
+
+Device.textContent = "Device Name: " + deviceName
+osVersions.textContent = osVersion
+physicalMemory.textContent = deviceMemory + " GB"
+
